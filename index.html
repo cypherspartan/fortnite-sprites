@@ -1,282 +1,718 @@
 <!DOCTYPE html>
-<html>
+<html lang='en'>
 <head>
 <meta charset='UTF-8'>
-<title>CypherSpartan's-Fortnite-Sprite-Collection</title>
+<meta name='viewport' content='width=device-width, initial-scale=1.0'>
+<meta name='theme-color' content='#0b0f17'>
+<title>CypherSpartan - Fortnite Sprite Collection</title>
 <style>
-
-                @page {
-                    size: Letter;
-                    margin: 0.55in;
-                }
 
                 * {
                     box-sizing: border-box;
                 }
 
+                html {
+                    scroll-behavior: smooth;
+                }
+
                 body {
-                    font-family: Arial, Helvetica, sans-serif;
                     margin: 0;
                     padding: 0;
-                    color: #222;
-                    background: white;
+                    background:
+                        radial-gradient(
+                            circle at top,
+                            #182235 0%,
+                            #0b0f17 45%,
+                            #070a0f 100%
+                        );
+                    color: #f5f7fa;
+                    font-family:
+                        Arial,
+                        Helvetica,
+                        sans-serif;
+                    min-height: 100vh;
+                }
+
+                body::before {
+                    content: '';
+                    position: fixed;
+                    inset: 0;
+                    pointer-events: none;
+                    opacity: 0.035;
+                    background-image:
+                        linear-gradient(
+                            45deg,
+                            #ffffff 25%,
+                            transparent 25%
+                        ),
+                        linear-gradient(
+                            -45deg,
+                            #ffffff 25%,
+                            transparent 25%
+                        );
+                    background-size: 4px 4px;
+                    z-index: -1;
+                }
+
+                .container {
+                    width: 100%;
+                    max-width: 1200px;
+                    margin: 0 auto;
+                    padding: 30px 20px 50px 20px;
+                }
+
+                /* ============================================
+                   HEADER
+                   ============================================ */
+
+                .header {
+                    text-align: center;
+                    margin-bottom: 30px;
+                }
+
+                .eyebrow {
+                    font-size: 12px;
+                    font-weight: bold;
+                    letter-spacing: 4px;
+                    text-transform: uppercase;
+                    color: #8fa3bf;
+                    margin-bottom: 10px;
                 }
 
                 h1 {
-                    margin: 0 0 6px 0;
-                    font-size: 28px;
+                    margin: 0;
+                    font-size: 42px;
+                    line-height: 1.1;
+                    font-weight: 900;
+                    letter-spacing: -1px;
                 }
 
-                h2 {
-                    margin-top: 28px;
-                    margin-bottom: 12px;
-                    font-size: 21px;
-                    border-bottom: 2px solid #333;
-                    padding-bottom: 6px;
+                .subtitle {
+                    margin-top: 10px;
+                    color: #9ba8ba;
+                    font-size: 14px;
                 }
 
-                .date {
-                    color: #666;
-                    font-size: 12px;
-                    margin-bottom: 20px;
+                /* ============================================
+                   MAIN DASHBOARD
+                   ============================================ */
+
+                .dashboard {
+                    background:
+                        linear-gradient(
+                            145deg,
+                            rgba(25, 34, 49, 0.96),
+                            rgba(12, 17, 26, 0.96)
+                        );
+                    border: 1px solid #263246;
+                    border-radius: 18px;
+                    padding: 28px;
+                    box-shadow:
+                        0 20px 60px rgba(0, 0, 0, 0.35);
+                    margin-bottom: 35px;
                 }
 
-                .summary {
-                    display: grid;
-                    grid-template-columns: repeat(3, 1fr);
-                    gap: 10px;
-                    margin-bottom: 25px;
-                }
-
-                .summary-box {
-                    border: 1px solid #ccc;
-                    border-radius: 6px;
-                    padding: 12px;
+                .completion {
                     text-align: center;
+                    margin-bottom: 28px;
                 }
 
-                .summary-title {
-                    font-size: 11px;
-                    color: #666;
+                .completion-label {
+                    color: #8fa3bf;
+                    font-size: 12px;
+                    font-weight: bold;
+                    letter-spacing: 3px;
                     text-transform: uppercase;
-                    margin-bottom: 5px;
-                }
-
-                .summary-value {
-                    font-size: 20px;
-                    font-weight: bold;
-                }
-
-                .family {
-                    border: 1px solid #ccc;
-                    border-radius: 6px;
-                    margin-bottom: 10px;
-                    padding: 11px;
-                    page-break-inside: avoid;
-                }
-
-                .family-name {
-                    font-size: 16px;
-                    font-weight: bold;
                     margin-bottom: 8px;
                 }
 
-                .variant {
-                    display: inline-block;
-                    border-radius: 4px;
-                    padding: 5px 8px;
-                    margin: 2px 4px 2px 0;
+                .completion-value {
+                    font-size: 52px;
+                    font-weight: 900;
+                    line-height: 1;
+                    margin-bottom: 18px;
+                }
+
+                .progress-container {
+                    width: 100%;
+                    height: 18px;
+                    background: #080c12;
+                    border: 1px solid #263246;
+                    border-radius: 999px;
+                    overflow: hidden;
+                    box-shadow:
+                        inset 0 2px 5px rgba(0,0,0,0.5);
+                }
+
+                .progress-bar {
+                    height: 100%;
+                    width: COMPLETION_PERCENT%;
+                    border-radius: 999px;
+                    background:
+                        linear-gradient(
+                            90deg,
+                            #22c55e,
+                            #5eead4
+                        );
+                    box-shadow:
+                        0 0 18px rgba(34,197,94,0.35);
+                    transition: width 0.5s ease;
+                }
+
+                /* ============================================
+                   STAT CARDS
+                   ============================================ */
+
+                .stats {
+                    display: grid;
+                    grid-template-columns:
+                        repeat(3, minmax(0, 1fr));
+                    gap: 14px;
+                }
+
+                .stat {
+                    background: rgba(7, 11, 17, 0.65);
+                    border: 1px solid #263246;
+                    border-radius: 12px;
+                    padding: 18px;
+                    text-align: center;
+                }
+
+                .stat-value {
+                    font-size: 27px;
+                    font-weight: 900;
+                    margin-bottom: 5px;
+                }
+
+                .stat-label {
+                    font-size: 11px;
+                    color: #8fa3bf;
+                    text-transform: uppercase;
+                    letter-spacing: 1.5px;
+                    font-weight: bold;
+                }
+
+                /* ============================================
+                   SECTIONS
+                   ============================================ */
+
+                .section {
+                    margin-top: 38px;
+                }
+
+                .section-header {
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    gap: 15px;
+                    margin-bottom: 15px;
+                }
+
+                .section-title {
+                    font-size: 23px;
+                    font-weight: 900;
+                    margin: 0;
+                }
+
+                .section-count {
                     font-size: 12px;
+                    color: #8fa3bf;
+                    background: #121a27;
+                    border: 1px solid #263246;
+                    padding: 6px 10px;
+                    border-radius: 999px;
                 }
 
-                .owned {
-                    background: #e8f5e9;
-                    border: 1px solid #81c784;
+                .owned-title {
+                    color: #4ade80;
                 }
 
-                .missing {
-                    background: #ffebee;
-                    border: 1px solid #e57373;
+                .missing-title {
+                    color: #fb7185;
                 }
+
+                /* ============================================
+                   SPRITE GRID
+                   ============================================ */
+
+                .sprite-grid {
+                    display: grid;
+                    grid-template-columns:
+                        repeat(3, minmax(0, 1fr));
+                    gap: 14px;
+                }
+
+                .family {
+                    background:
+                        linear-gradient(
+                            145deg,
+                            rgba(20, 28, 41, 0.95),
+                            rgba(11, 16, 24, 0.95)
+                        );
+                    border: 1px solid #263246;
+                    border-radius: 14px;
+                    padding: 17px;
+                    min-height: 120px;
+                    box-shadow:
+                        0 8px 20px rgba(0,0,0,0.18);
+                    transition:
+                        transform 0.15s ease,
+                        border-color 0.15s ease;
+                }
+
+                .family:hover {
+                    transform: translateY(-2px);
+                    border-color: #3b4d68;
+                }
+
+                .family-name {
+                    font-size: 17px;
+                    font-weight: 900;
+                    margin-bottom: 13px;
+                    color: #ffffff;
+                }
+
+                .family-status {
+                    float: right;
+                    font-size: 10px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    letter-spacing: 1px;
+                    padding: 4px 7px;
+                    border-radius: 999px;
+                }
+
+                .status-complete {
+                    color: #4ade80;
+                    background: rgba(34,197,94,0.1);
+                    border: 1px solid rgba(34,197,94,0.25);
+                }
+
+                .status-progress {
+                    color: #fbbf24;
+                    background: rgba(251,191,36,0.1);
+                    border: 1px solid rgba(251,191,36,0.25);
+                }
+
+                .status-missing {
+                    color: #fb7185;
+                    background: rgba(244,63,94,0.1);
+                    border: 1px solid rgba(244,63,94,0.25);
+                }
+
+                /* ============================================
+                   VARIANT BADGES
+                   ============================================ */
+
+                .variants {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 7px;
+                }
+
+                .variant {
+                    display: inline-flex;
+                    align-items: center;
+                    gap: 5px;
+                    padding: 7px 9px;
+                    border-radius: 7px;
+                    font-size: 11px;
+                    font-weight: bold;
+                    border: 1px solid;
+                }
+
+                .variant-owned {
+                    color: #d1fae5;
+                    background: rgba(34,197,94,0.08);
+                    border-color: rgba(34,197,94,0.28);
+                }
+
+                .variant-missing {
+                    color: #fecdd3;
+                    background: rgba(244,63,94,0.08);
+                    border-color: rgba(244,63,94,0.28);
+                }
+
+                .variant-gold {
+                    color: #fde68a;
+                    background: rgba(234,179,8,0.10);
+                    border-color: rgba(234,179,8,0.30);
+                }
+
+                .variant-cheat {
+                    color: #c4b5fd;
+                    background: rgba(139,92,246,0.10);
+                    border-color: rgba(139,92,246,0.30);
+                }
+
+                .variant-loot {
+                    color: #67e8f9;
+                    background: rgba(6,182,212,0.10);
+                    border-color: rgba(6,182,212,0.30);
+                }
+
+                .variant-base {
+                    color: #d1d5db;
+                    background: rgba(148,163,184,0.08);
+                    border-color: rgba(148,163,184,0.25);
+                }
+
+                /* ============================================
+                   EMPTY STATE
+                   ============================================ */
 
                 .empty {
-                    color: #777;
-                    font-size: 12px;
+                    text-align: center;
+                    padding: 35px;
+                    color: #8fa3bf;
+                    background: rgba(7,11,17,0.55);
+                    border: 1px dashed #263246;
+                    border-radius: 12px;
                 }
+
+                /* ============================================
+                   FOOTER
+                   ============================================ */
 
                 .footer {
-                    margin-top: 30px;
-                    padding-top: 10px;
-                    border-top: 1px solid #ccc;
-                    font-size: 10px;
-                    color: #777;
+                    margin-top: 45px;
+                    padding-top: 20px;
+                    border-top: 1px solid #202b3c;
+                    text-align: center;
+                    color: #64748b;
+                    font-size: 11px;
                 }
 
-                .section-owned {
-                    color: #2e7d32;
+                /* ============================================
+                   MOBILE
+                   ============================================ */
+
+                @media (max-width: 900px) {
+
+                    .sprite-grid {
+                        grid-template-columns:
+                            repeat(2, minmax(0, 1fr));
+                    }
+
+                    h1 {
+                        font-size: 34px;
+                    }
                 }
 
-                .section-missing {
-                    color: #c62828;
+                @media (max-width: 600px) {
+
+                    .container {
+                        padding: 20px 12px 35px 12px;
+                    }
+
+                    .dashboard {
+                        padding: 18px;
+                        border-radius: 14px;
+                    }
+
+                    h1 {
+                        font-size: 28px;
+                    }
+
+                    .completion-value {
+                        font-size: 42px;
+                    }
+
+                    .stats {
+                        grid-template-columns: 1fr;
+                    }
+
+                    .sprite-grid {
+                        grid-template-columns: 1fr;
+                    }
+
+                    .section-header {
+                        align-items: flex-start;
+                        flex-direction: column;
+                    }
                 }
             
 </style>
 </head>
 <body>
-<h1>CypherSpartan's Fortnite Sprite Collection</h1>
-<div class='date'>Generated: September 4, 2026 6:34 PM</div>
-<div class='summary'>
-<div class='summary-box'><div class='summary-title'>Variants</div><div class='summary-value'>27 / 61</div></div>
-<div class='summary-box'><div class='summary-title'>Families</div><div class='summary-value'>12 / 16</div></div>
-<div class='summary-box'><div class='summary-title'>Completion</div><div class='summary-value'>44.26%</div></div>
+<div class='container'>
+<header class='header'>
+<div class='eyebrow'>FORTNITE COLLECTION</div>
+<h1>CypherSpartan's Sprite Collection</h1>
+<div class='subtitle'>Tracking every sprite and variant</div>
+</header>
+<section class='dashboard'>
+<div class='completion'>
+<div class='completion-label'>Collection Progress</div>
+<div class='completion-value'>44.26%</div>
+<div class='progress-container'>
+<div class='progress-bar' style='width:44.26%;'></div>
 </div>
-<h2 class='section-owned'>Owned Sprites</h2>
+</div>
+<div class='stats'>
+<div class='stat'>
+<div class='stat-value'>27 / 61</div>
+<div class='stat-label'>Variants Owned</div>
+</div>
+<div class='stat'>
+<div class='stat-value'>12 / 16</div>
+<div class='stat-label'>Families Complete</div>
+</div>
+<div class='stat'>
+<div class='stat-value'>44.26%</div>
+<div class='stat-label'>Completion</div>
+</div>
+</div>
+</section>
+<section class='section'>
+<div class='section-header'>
+<h2 class='section-title owned-title'>✓ Owned Sprites</h2>
+<div class='section-count'>12 families</div>
+</div>
+<div class='sprite-grid'>
 <div class='family'>
+<span class='family-status status-progress'>In Progress</span>
 <div class='family-name'>8-Bit Sprite</div>
-<span class='variant owned'>✓ Base</span>
-<span class='variant owned'>✓ Gold</span>
-<span class='variant owned'>✓ CheatMaster</span>
+<div class='variants'>
+<span class='variant variant-base'>✓ Base</span>
+<span class='variant variant-gold'>✓ Gold</span>
+<span class='variant variant-cheat'>✓ CheatMaster</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-progress'>In Progress</span>
 <div class='family-name'>Adventure Sprite</div>
-<span class='variant owned'>✓ Base</span>
-<span class='variant owned'>✓ Gold</span>
-<span class='variant owned'>✓ CheatMaster</span>
+<div class='variants'>
+<span class='variant variant-base'>✓ Base</span>
+<span class='variant variant-gold'>✓ Gold</span>
+<span class='variant variant-cheat'>✓ CheatMaster</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-progress'>In Progress</span>
 <div class='family-name'>Bush Sprite</div>
-<span class='variant owned'>✓ Base</span>
-<span class='variant owned'>✓ Gold</span>
-<span class='variant owned'>✓ CheatMaster</span>
+<div class='variants'>
+<span class='variant variant-base'>✓ Base</span>
+<span class='variant variant-gold'>✓ Gold</span>
+<span class='variant variant-cheat'>✓ CheatMaster</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-progress'>In Progress</span>
 <div class='family-name'>Crown Sprite</div>
-<span class='variant owned'>✓ Base</span>
+<div class='variants'>
+<span class='variant variant-base'>✓ Base</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-progress'>In Progress</span>
 <div class='family-name'>Jackrabbit Sprite</div>
-<span class='variant owned'>✓ Base</span>
-<span class='variant owned'>✓ Gold</span>
+<div class='variants'>
+<span class='variant variant-base'>✓ Base</span>
+<span class='variant variant-gold'>✓ Gold</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-progress'>In Progress</span>
 <div class='family-name'>Jonesy Sprite</div>
-<span class='variant owned'>✓ Base</span>
-<span class='variant owned'>✓ Gold</span>
-<span class='variant owned'>✓ CheatMaster</span>
+<div class='variants'>
+<span class='variant variant-base'>✓ Base</span>
+<span class='variant variant-gold'>✓ Gold</span>
+<span class='variant variant-cheat'>✓ CheatMaster</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-progress'>In Progress</span>
 <div class='family-name'>Killswitch Sprite</div>
-<span class='variant owned'>✓ Base</span>
+<div class='variants'>
+<span class='variant variant-base'>✓ Base</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-progress'>In Progress</span>
 <div class='family-name'>Klombo Sprite</div>
-<span class='variant owned'>✓ Base</span>
-<span class='variant owned'>✓ Gold</span>
+<div class='variants'>
+<span class='variant variant-base'>✓ Base</span>
+<span class='variant variant-gold'>✓ Gold</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-progress'>In Progress</span>
 <div class='family-name'>Shadow Sprite</div>
-<span class='variant owned'>✓ Base</span>
-<span class='variant owned'>✓ Gold</span>
-<span class='variant owned'>✓ CheatMaster</span>
+<div class='variants'>
+<span class='variant variant-base'>✓ Base</span>
+<span class='variant variant-gold'>✓ Gold</span>
+<span class='variant variant-cheat'>✓ CheatMaster</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-progress'>In Progress</span>
 <div class='family-name'>Sonic Sprite</div>
-<span class='variant owned'>✓ Base</span>
-<span class='variant owned'>✓ Gold</span>
-<span class='variant owned'>✓ CheatMaster</span>
+<div class='variants'>
+<span class='variant variant-base'>✓ Base</span>
+<span class='variant variant-gold'>✓ Gold</span>
+<span class='variant variant-cheat'>✓ CheatMaster</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-progress'>In Progress</span>
 <div class='family-name'>Storm Scout Sprite</div>
-<span class='variant owned'>✓ Base</span>
+<div class='variants'>
+<span class='variant variant-base'>✓ Base</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-progress'>In Progress</span>
 <div class='family-name'>Tails Sprite</div>
-<span class='variant owned'>✓ Base</span>
-<span class='variant owned'>✓ Gold</span>
-<span class='variant owned'>✓ CheatMaster</span>
+<div class='variants'>
+<span class='variant variant-base'>✓ Base</span>
+<span class='variant variant-gold'>✓ Gold</span>
+<span class='variant variant-cheat'>✓ CheatMaster</span>
 </div>
-<h2 class='section-missing'>Not Owned</h2>
+</div>
+</div>
+</section>
+<section class='section'>
+<div class='section-header'>
+<h2 class='section-title missing-title'>✗ Not Owned</h2>
+<div class='section-count'>16 families remaining</div>
+</div>
+<div class='sprite-grid'>
 <div class='family'>
+<span class='family-status status-progress'>Variants Missing</span>
 <div class='family-name'>8-Bit Sprite</div>
-<span class='variant missing'>✗ LootHacker</span>
+<div class='variants'>
+<span class='variant variant-loot'>✗ LootHacker</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-progress'>Variants Missing</span>
 <div class='family-name'>Adventure Sprite</div>
-<span class='variant missing'>✗ LootHacker</span>
+<div class='variants'>
+<span class='variant variant-loot'>✗ LootHacker</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-progress'>Variants Missing</span>
 <div class='family-name'>Bush Sprite</div>
-<span class='variant missing'>✗ LootHacker</span>
+<div class='variants'>
+<span class='variant variant-loot'>✗ LootHacker</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-progress'>Variants Missing</span>
 <div class='family-name'>Crown Sprite</div>
-<span class='variant missing'>✗ Gold</span>
-<span class='variant missing'>✗ CheatMaster</span>
-<span class='variant missing'>✗ LootHacker</span>
+<div class='variants'>
+<span class='variant variant-gold'>✗ Gold</span>
+<span class='variant variant-cheat'>✗ CheatMaster</span>
+<span class='variant variant-loot'>✗ LootHacker</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-progress'>Variants Missing</span>
 <div class='family-name'>Jackrabbit Sprite</div>
-<span class='variant missing'>✗ CheatMaster</span>
-<span class='variant missing'>✗ LootHacker</span>
+<div class='variants'>
+<span class='variant variant-cheat'>✗ CheatMaster</span>
+<span class='variant variant-loot'>✗ LootHacker</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-progress'>Variants Missing</span>
 <div class='family-name'>Jonesy Sprite</div>
-<span class='variant missing'>✗ LootHacker</span>
+<div class='variants'>
+<span class='variant variant-loot'>✗ LootHacker</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-progress'>Variants Missing</span>
 <div class='family-name'>Killswitch Sprite</div>
-<span class='variant missing'>✗ Gold</span>
-<span class='variant missing'>✗ CheatMaster</span>
-<span class='variant missing'>✗ LootHacker</span>
+<div class='variants'>
+<span class='variant variant-gold'>✗ Gold</span>
+<span class='variant variant-cheat'>✗ CheatMaster</span>
+<span class='variant variant-loot'>✗ LootHacker</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-progress'>Variants Missing</span>
 <div class='family-name'>Klombo Sprite</div>
-<span class='variant missing'>✗ CheatMaster</span>
-<span class='variant missing'>✗ LootHacker</span>
+<div class='variants'>
+<span class='variant variant-cheat'>✗ CheatMaster</span>
+<span class='variant variant-loot'>✗ LootHacker</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-missing'>Missing</span>
 <div class='family-name'>Mega Man Sprite</div>
-<span class='variant missing'>✗ Base</span>
+<div class='variants'>
+<span class='variant variant-base'>✗ Base</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-missing'>Missing</span>
 <div class='family-name'>Onigiri Sprite</div>
-<span class='variant missing'>✗ Base</span>
-<span class='variant missing'>✗ Gold</span>
-<span class='variant missing'>✗ CheatMaster</span>
-<span class='variant missing'>✗ LootHacker</span>
+<div class='variants'>
+<span class='variant variant-base'>✗ Base</span>
+<span class='variant variant-gold'>✗ Gold</span>
+<span class='variant variant-cheat'>✗ CheatMaster</span>
+<span class='variant variant-loot'>✗ LootHacker</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-missing'>Missing</span>
 <div class='family-name'>Overshield Sprite</div>
-<span class='variant missing'>✗ Base</span>
-<span class='variant missing'>✗ Gold</span>
-<span class='variant missing'>✗ CheatMaster</span>
-<span class='variant missing'>✗ LootHacker</span>
+<div class='variants'>
+<span class='variant variant-base'>✗ Base</span>
+<span class='variant variant-gold'>✗ Gold</span>
+<span class='variant variant-cheat'>✗ CheatMaster</span>
+<span class='variant variant-loot'>✗ LootHacker</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-progress'>Variants Missing</span>
 <div class='family-name'>Shadow Sprite</div>
-<span class='variant missing'>✗ LootHacker</span>
+<div class='variants'>
+<span class='variant variant-loot'>✗ LootHacker</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-progress'>Variants Missing</span>
 <div class='family-name'>Sonic Sprite</div>
-<span class='variant missing'>✗ LootHacker</span>
+<div class='variants'>
+<span class='variant variant-loot'>✗ LootHacker</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-progress'>Variants Missing</span>
 <div class='family-name'>Storm Scout Sprite</div>
-<span class='variant missing'>✗ Gold</span>
-<span class='variant missing'>✗ CheatMaster</span>
-<span class='variant missing'>✗ LootHacker</span>
+<div class='variants'>
+<span class='variant variant-gold'>✗ Gold</span>
+<span class='variant variant-cheat'>✗ CheatMaster</span>
+<span class='variant variant-loot'>✗ LootHacker</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-progress'>Variants Missing</span>
 <div class='family-name'>Tails Sprite</div>
-<span class='variant missing'>✗ LootHacker</span>
+<div class='variants'>
+<span class='variant variant-loot'>✗ LootHacker</span>
+</div>
 </div>
 <div class='family'>
+<span class='family-status status-missing'>Missing</span>
 <div class='family-name'>X-Ray Sprite</div>
-<span class='variant missing'>✗ Base</span>
-<span class='variant missing'>✗ Gold</span>
-<span class='variant missing'>✗ CheatMaster</span>
-<span class='variant missing'>✗ LootHacker</span>
+<div class='variants'>
+<span class='variant variant-base'>✗ Base</span>
+<span class='variant variant-gold'>✗ Gold</span>
+<span class='variant variant-cheat'>✗ CheatMaster</span>
+<span class='variant variant-loot'>✗ LootHacker</span>
 </div>
-<div class='footer'>CypherSpartan's Fortnite Sprite Collection Report</div>
+</div>
+</div>
+</section>
+<footer class='footer'>
+CypherSpartan's Fortnite Sprite Collection
+<br>Last updated: September 4, 2026 6:40 PM
+</footer>
+</div>
 </body>
 </html>
