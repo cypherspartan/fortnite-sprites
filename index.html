@@ -166,7 +166,7 @@
                 .stats {
                     display: grid;
                     grid-template-columns:
-                        repeat(3, minmax(0, 1fr));
+                        repeat(4, minmax(0, 1fr));
                     gap: 14px;
                 }
 
@@ -320,7 +320,20 @@
                     font-weight: bold;
                     border: 1px solid;
                 }
+                .variant-mastered {
+                    box-shadow: 0 0 10px rgba(250, 204, 21, 0.35);
+                }
 
+                .variant-not-mastered {
+                    opacity: 0.9;
+                }
+
+                .mastery-label {
+                    font-size: 9px;
+                    font-weight: 700;
+                    letter-spacing: 0.4px;
+                    margin-left: 4px;
+                }
                 .variant-owned {
                     color: #d1fae5;
                     background: rgba(34,197,94,0.08);
@@ -465,124 +478,123 @@
 </div>
 </div>
 </section>
-<section class='section'>
-<div class='section-header'>
-<h2 class='section-title owned-title'>✓ Owned Sprites</h2>
-<div class='section-count'>14 families</div>
-</div>
-<div class='sprite-grid'>
-<div class='family'>
-<span class='family-status status-progress'>In Progress</span>
-<div class='family-name'>8-Bit Sprite</div>
-<div class='variants'>
-<span class='variant variant-base'>✓ Base</span>
-<span class='variant variant-gold'>✓ Gold</span>
-<span class='variant variant-cheat'>✓ CheatMaster</span>
+<div class='stat'>
+<div class='stat-value'>2 / 29</div>
+<div class='stat-label'>Variants Mastered</div>
 </div>
 </div>
-<div class='family'>
-<span class='family-status status-progress'>In Progress</span>
-<div class='family-name'>Adventure Sprite</div>
-<div class='variants'>
-<span class='variant variant-base'>✓ Base</span>
-<span class='variant variant-gold'>✓ Gold</span>
-<span class='variant variant-cheat'>✓ CheatMaster</span>
+</section>
+<section class="collection-section">
+<h2>Owned Sprites</h2>
+<div class="sprite-grid">
+<div class="sprite-card">
+<div class="sprite-name">8-Bit</div>
+<div class="variants">
+<span class="variant-base">✓ Base — Not Mastered</span>
+<span class='variant variant-gold variant-not-mastered'>✓ Gold <span class='mastery-label'>— Not Mastered</span></span>
+<span class='variant variant-cheat variant-not-mastered'>✓ CheatMaster <span class='mastery-label'>— Not Mastered</span></span>
 </div>
 </div>
-<div class='family'>
-<span class='family-status status-progress'>In Progress</span>
-<div class='family-name'>Bush Sprite</div>
-<div class='variants'>
-<span class='variant variant-base'>✓ Base</span>
-<span class='variant variant-gold'>✓ Gold</span>
-<span class='variant variant-cheat'>✓ CheatMaster</span>
+<div class="sprite-card">
+<div class="sprite-name">Adventure</div>
+<div class="variants">
+<span class="variant-base">✓ Base — Not Mastered</span>
+<span class='variant variant-gold variant-not-mastered'>✓ Gold <span class='mastery-label'>— Not Mastered</span></span>
+<span class='variant variant-cheat variant-not-mastered'>✓ CheatMaster <span class='mastery-label'>— Not Mastered</span></span>
 </div>
 </div>
-<div class='family'>
-<span class='family-status status-progress'>In Progress</span>
-<div class='family-name'>Crown Sprite</div>
-<div class='variants'>
-<span class='variant variant-base'>✓ Base</span>
+<div class="sprite-card">
+<div class="sprite-name">Bush</div>
+<div class="variants">
+<span class="variant-base">✓ Base — Not Mastered</span>
+<span class='variant variant-gold variant-not-mastered'>✓ Gold <span class='mastery-label'>— Not Mastered</span></span>
+<span class='variant variant-cheat variant-not-mastered'>✓ CheatMaster <span class='mastery-label'>— Not Mastered</span></span>
 </div>
 </div>
-<div class='family'>
-<span class='family-status status-progress'>In Progress</span>
-<div class='family-name'>Jackrabbit Sprite</div>
-<div class='variants'>
-<span class='variant variant-base'>✓ Base</span>
-<span class='variant variant-gold'>✓ Gold</span>
+<div class="sprite-card">
+<div class="sprite-name">Crown</div>
+<div class="variants">
+<span class="variant-base">✓ Base — Not Mastered</span>
 </div>
 </div>
-<div class='family'>
-<span class='family-status status-progress'>In Progress</span>
-<div class='family-name'>Jonesy Sprite</div>
-<div class='variants'>
-<span class='variant variant-base'>✓ Base</span>
-<span class='variant variant-gold'>✓ Gold</span>
-<span class='variant variant-cheat'>✓ CheatMaster</span>
+<div class="sprite-card">
+<div class="sprite-name">Jackrabbit</div>
+<div class="variants">
+<span class="variant-base">✓ Base — Not Mastered</span>
+<span class='variant variant-gold variant-not-mastered'>✓ Gold <span class='mastery-label'>— Not Mastered</span></span>
 </div>
 </div>
-<div class='family'>
-<span class='family-status status-progress'>In Progress</span>
-<div class='family-name'>Killswitch Sprite</div>
-<div class='variants'>
-<span class='variant variant-base'>✓ Base</span>
+<div class="sprite-card">
+<div class="sprite-name">Jonesy</div>
+<div class="variants">
+<span class="variant-base">✓ Base — Not Mastered</span>
+<span class='variant variant-gold variant-not-mastered'>✓ Gold <span class='mastery-label'>— Not Mastered</span></span>
+<span class='variant variant-cheat variant-not-mastered'>✓ CheatMaster <span class='mastery-label'>— Not Mastered</span></span>
 </div>
 </div>
-<div class='family'>
-<span class='family-status status-progress'>In Progress</span>
-<div class='family-name'>Klombo Sprite</div>
-<div class='variants'>
-<span class='variant variant-base'>✓ Base</span>
-<span class='variant variant-gold'>✓ Gold</span>
+<div class="sprite-card">
+<div class="sprite-name">Killswitch</div>
+<div class="variants">
+<span class="variant-base">✓ Base — Not Mastered</span>
 </div>
 </div>
-<div class='family'>
-<span class='family-status status-complete'>Complete</span>
-<div class='family-name'>Mega Man Sprite</div>
-<div class='variants'>
-<span class='variant variant-base'>✓ Base</span>
+<div class="sprite-card">
+<div class="sprite-name">Klombo</div>
+<div class="variants">
+<span class="variant-base">✓ Base — Not Mastered</span>
+<span class='variant variant-gold variant-not-mastered'>✓ Gold <span class='mastery-label'>— Not Mastered</span></span>
 </div>
 </div>
-<div class='family'>
-<span class='family-status status-progress'>In Progress</span>
-<div class='family-name'>Onigiri Sprite</div>
-<div class='variants'>
-<span class='variant variant-base'>✓ Base</span>
+<div class="sprite-card">
+<div class="sprite-name">Mega Man</div>
+<div class="variants">
+<span class="variant-base">★ Base — MASTERED</span>
 </div>
 </div>
-<div class='family'>
-<span class='family-status status-progress'>In Progress</span>
-<div class='family-name'>Shadow Sprite</div>
-<div class='variants'>
-<span class='variant variant-base'>✓ Base</span>
-<span class='variant variant-gold'>✓ Gold</span>
-<span class='variant variant-cheat'>✓ CheatMaster</span>
+<div class="sprite-card">
+<div class="sprite-name">Onigiri</div>
+<div class="variants">
+<span class="variant-base">★ Base — MASTERED</span>
 </div>
 </div>
-<div class='family'>
-<span class='family-status status-progress'>In Progress</span>
-<div class='family-name'>Sonic Sprite</div>
-<div class='variants'>
-<span class='variant variant-base'>✓ Base</span>
-<span class='variant variant-gold'>✓ Gold</span>
-<span class='variant variant-cheat'>✓ CheatMaster</span>
+<div class="sprite-card">
+<div class="sprite-name">Overshield</div>
+<div class="variants">
 </div>
 </div>
-<div class='family'>
-<span class='family-status status-progress'>In Progress</span>
-<div class='family-name'>Storm Scout Sprite</div>
-<div class='variants'>
-<span class='variant variant-base'>✓ Base</span>
+<div class="sprite-card">
+<div class="sprite-name">Shadow</div>
+<div class="variants">
+<span class="variant-base">✓ Base — Not Mastered</span>
+<span class='variant variant-gold variant-not-mastered'>✓ Gold <span class='mastery-label'>— Not Mastered</span></span>
+<span class='variant variant-cheat variant-not-mastered'>✓ CheatMaster <span class='mastery-label'>— Not Mastered</span></span>
 </div>
 </div>
-<div class='family'>
-<span class='family-status status-progress'>In Progress</span>
-<div class='family-name'>Tails Sprite</div>
-<div class='variants'>
-<span class='variant variant-base'>✓ Base</span>
-<span class='variant variant-gold'>✓ Gold</span>
-<span class='variant variant-cheat'>✓ CheatMaster</span>
+<div class="sprite-card">
+<div class="sprite-name">Sonic</div>
+<div class="variants">
+<span class="variant-base">✓ Base — Not Mastered</span>
+<span class='variant variant-gold variant-not-mastered'>✓ Gold <span class='mastery-label'>— Not Mastered</span></span>
+<span class='variant variant-cheat variant-not-mastered'>✓ CheatMaster <span class='mastery-label'>— Not Mastered</span></span>
+</div>
+</div>
+<div class="sprite-card">
+<div class="sprite-name">Storm Scout</div>
+<div class="variants">
+<span class="variant-base">✓ Base — Not Mastered</span>
+</div>
+</div>
+<div class="sprite-card">
+<div class="sprite-name">Tails</div>
+<div class="variants">
+<span class="variant-base">✓ Base — Not Mastered</span>
+<span class='variant variant-gold variant-not-mastered'>✓ Gold <span class='mastery-label'>— Not Mastered</span></span>
+<span class='variant variant-cheat variant-not-mastered'>✓ CheatMaster <span class='mastery-label'>— Not Mastered</span></span>
+</div>
+</div>
+<div class="sprite-card">
+<div class="sprite-name">X-Ray</div>
+<div class="variants">
 </div>
 </div>
 </div>
@@ -718,7 +730,7 @@
 </section>
 <footer class='footer'>
 CypherSpartan's Fortnite Sprite Collection
-<br>Last updated: September 6, 2026 4:25 AM
+<br>Last updated: September 6, 2026 4:45 AM
 </footer>
 </div>
 </body>
