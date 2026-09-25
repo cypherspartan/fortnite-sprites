@@ -300,107 +300,207 @@
                     border: 1px solid rgba(244,63,94,0.25);
                 }
 
-                /* ============================================
-                   VARIANT BADGES
-                   ============================================ */
-                
-                .sprite-icon {
-                    width: 48px;
-                    height: 48px;
-                    object-fit: contain;
-                    flex-shrink: 0;
-                }
+                    /* ============================================
+                    VARIANT BADGES
+                    ============================================ */
 
-                .variant {
-                    display: inline-flex;
-                    align-items: center;
-                    gap: 8px;
-                }
+                    .sprite-icon {
+                        width: 48px;
+                        height: 48px;
+                        object-fit: contain;
+                        flex-shrink: 0;
+                        border-radius: 6px;
+                    }
 
-                .variant-content {
-                    display: inline-flex;
-                    align-items: center;
-                }
+                    .variant {
+                        display: inline-flex;
+                        align-items: center;
+                        gap: 8px;
+                        padding: 8px 10px;
+                        border-radius: 9px;
+                        font-size: 11px;
+                        font-weight: bold;
+                        border: 1px solid;
+                        min-height: 64px;
+                        transition:
+                            transform 0.2s ease,
+                            filter 0.2s ease,
+                            opacity 0.2s ease,
+                            box-shadow 0.2s ease;
+                    }
 
-                .variant-name {
-                    display: inline-flex;
-                    align-items: center;
-                }
+                    .variant-content {
+                        display: inline-flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: flex-start;
+                        line-height: 1.2;
+                    }
 
-                .mastery-label {
-                    font-size: 9px;
-                    font-weight: 700;
-                    letter-spacing: normal;
-                    margin-left: 4px;
-                    white-space: nowrap;
-                }
+                    .variant-name {
+                        display: inline-flex;
+                        align-items: center;
+                    }
 
+                    .mastery-label {
+                        font-size: 9px;
+                        font-weight: 700;
+                        letter-spacing: 0;
+                        margin-top: 3px;
+                        white-space: nowrap;
+                    }
 
-                .variants {
-                    display: flex;
-                    flex-wrap: wrap;
-                    gap: 7px;
-                }
+                    /* ============================================
+                    OWNED VARIANTS
+                    ============================================ */
 
-                .variant {
-                    display: inline-flex;
-                    align-items: center;
-                    gap: 5px;
-                    padding: 7px 9px;
-                    border-radius: 7px;
-                    font-size: 11px;
-                    font-weight: bold;
-                    border: 1px solid;
-                }
-                .variant-mastered {
-                    box-shadow: 0 0 10px rgba(250, 204, 21, 0.35);
-                }
+                    .variant-owned {
+                        color: #d1fae5;
+                        background:
+                            linear-gradient(
+                                145deg,
+                                rgba(34,197,94,0.14),
+                                rgba(7,11,17,0.75)
+                            );
+                        border-color: rgba(34,197,94,0.35);
+                        box-shadow:
+                            0 4px 12px rgba(0,0,0,0.20);
+                    }
 
-                .variant-not-mastered {
-                    opacity: 0.9;
-                }
+                    .variant-owned:hover {
+                        transform: translateY(-2px);
+                        box-shadow:
+                            0 7px 18px rgba(0,0,0,0.30);
+                    }
 
-                .mastery-label {
-                    font-size: 9px;
-                    font-weight: 700;
-                    letter-spacing: 0px;
-                    margin-left: 4px;
-                }
-                .variant-owned {
-                    color: #d1fae5;
-                    background: rgba(34,197,94,0.08);
-                    border-color: rgba(34,197,94,0.28);
-                }
+                    /* ============================================
+                    NOT OWNED VARIANTS
+                    ============================================ */
 
-                .variant-missing {
-                    color: #fecdd3;
-                    background: rgba(244,63,94,0.08);
-                    border-color: rgba(244,63,94,0.28);
-                }
+                    .variant-missing {
+                        color: #fecdd3;
+                        background:
+                            linear-gradient(
+                                145deg,
+                                rgba(244,63,94,0.08),
+                                rgba(7,11,17,0.88)
+                            );
+                        border-color: rgba(244,63,94,0.28);
+                        opacity: 0.72;
+                        filter: saturate(0.35);
+                    }
 
-                .variant-gold {
-                    color: #fde68a;
-                    background: rgba(234,179,8,0.10);
-                    border-color: rgba(234,179,8,0.30);
-                }
+                    .variant-missing .sprite-icon {
+                        filter:
+                            grayscale(100%)
+                            brightness(0.55);
+                        opacity: 0.65;
+                    }
 
-                .variant-cheat {
-                    color: #c4b5fd;
-                    background: rgba(139,92,246,0.10);
-                    border-color: rgba(139,92,246,0.30);
-                }
+                    .variant-missing:hover {
+                        opacity: 0.9;
+                        filter: saturate(0.6);
+                        transform: translateY(-2px);
+                    }
 
-                .variant-loot {
-                    color: #67e8f9;
-                    background: rgba(6,182,212,0.10);
-                    border-color: rgba(6,182,212,0.30);
-                }
+                    .variant-missing:hover .sprite-icon {
+                        filter:
+                            grayscale(70%)
+                            brightness(0.7);
+                    }
 
-                .variant-base {
-                    color: #d1d5db;
-                    background: rgba(148,163,184,0.08);
-                    border-color: rgba(148,163,184,0.25);
-                }
+                    /* ============================================
+                    BASE VARIANT
+                    ============================================ */
+
+                    .variant-base {
+                        color: #d1d5db;
+                        background:
+                            linear-gradient(
+                                145deg,
+                                rgba(148,163,184,0.10),
+                                rgba(7,11,17,0.75)
+                            );
+                        border-color: rgba(148,163,184,0.28);
+                    }
+
+                    /* ============================================
+                    GOLD VARIANT
+                    ============================================ */
+
+                    .variant-gold {
+                        color: #fde68a;
+                        background:
+                            linear-gradient(
+                                145deg,
+                                rgba(234,179,8,0.14),
+                                rgba(7,11,17,0.78)
+                            );
+                        border-color: rgba(234,179,8,0.35);
+                    }
+
+                    /* ============================================
+                    CHEATMASTER VARIANT
+                    ============================================ */
+
+                    .variant-cheat {
+                        color: #c4b5fd;
+                        background:
+                            linear-gradient(
+                                145deg,
+                                rgba(139,92,246,0.14),
+                                rgba(7,11,17,0.78)
+                            );
+                        border-color: rgba(139,92,246,0.35);
+                    }
+
+                    /* ============================================
+                    LOOTHACKER VARIANT
+                    ============================================ */
+
+                    .variant-loot {
+                        color: #67e8f9;
+                        background:
+                            linear-gradient(
+                                145deg,
+                                rgba(6,182,212,0.14),
+                                rgba(7,11,17,0.78)
+                            );
+                        border-color: rgba(6,182,212,0.35);
+                    }
+
+                    /* ============================================
+                    MASTERED
+                    ============================================ */
+
+                    .variant-mastered {
+                        box-shadow:
+                            0 0 14px rgba(250,204,21,0.30),
+                            inset 0 0 12px rgba(250,204,21,0.05);
+                    }
+
+                    .variant-mastered .sprite-icon {
+                        filter:
+                            drop-shadow(0 0 5px rgba(250,204,21,0.35));
+                    }
+
+                    /* ============================================
+                    OWNED BUT NOT MASTERED
+                    ============================================ */
+
+                    .variant-not-mastered {
+                        opacity: 0.92;
+                    }
+
+                    /* ============================================
+                    VARIANT CONTAINER
+                    ============================================ */
+
+                    .variants {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 8px;
+                    }
 
                 /* ============================================
                    EMPTY STATE
@@ -553,6 +653,7 @@
 <span class='variant variant-base variant-not-mastered'><img class='sprite-icon' src='https://cdn.api-fortnite.com/images/T_Icon_BR_Creature_Sprite_BushRanger.png' alt='Base' loading='lazy'><span class='variant-content'><span class='variant-name'>✓ Base</span><span class='mastery-label'> — Not Mastered</span></span></span>
 <span class='variant variant-gold variant-not-mastered'><img class='sprite-icon' src='https://cdn.api-fortnite.com/images/T_Icon_BR_Creature_Sprite_BushRanger_Gold.png' alt='Gold' loading='lazy'><span class='variant-content'><span class='variant-name'>✓ Gold</span><span class='mastery-label'> — Not Mastered</span></span></span>
 <span class='variant variant-cheat variant-not-mastered'><img class='sprite-icon' src='https://cdn.api-fortnite.com/images/T_Icon_BR_Creature_Sprite_BushRanger_Cheatmaster.png' alt='CheatMaster' loading='lazy'><span class='variant-content'><span class='variant-name'>✓ CheatMaster</span><span class='mastery-label'> — Not Mastered</span></span></span>
+<span class='variant variant-loot variant-not-mastered'><img class='sprite-icon' src='https://cdn.api-fortnite.com/images/T_Icon_BR_Creature_Sprite_BushRanger_Hacker.png' alt='LootHacker' loading='lazy'><span class='variant-content'><span class='variant-name'>✓ LootHacker</span><span class='mastery-label'> — Not Mastered</span></span></span>
 </div>
 </div>
 <div class='family'>
@@ -713,7 +814,6 @@
 <span class='family-status status-progress'>Variants Missing</span>
 <div class='family-name'>Bush Sprite</div>
 <div class='variants'>
-<span class='variant variant-loot'><img class='sprite-icon' src='https://cdn.api-fortnite.com/images/T_Icon_BR_Creature_Sprite_BushRanger_Hacker.png' alt='LootHacker' loading='lazy'><span class='variant-content'>✗ LootHacker</span></span>
 <span class='variant variant-missing'><img class='sprite-icon' src='https://cdn.api-fortnite.com/images/T_Icon_BR_Creature_Sprite_BushRanger_BountyHunter.png' alt='Reaper' loading='lazy'><span class='variant-content'>✗ Reaper</span></span>
 </div>
 </div>
@@ -856,8 +956,8 @@
 <footer class='footer'>
 CypherSpartan's Fortnite Sprite Collection
 <br>Fortnite Version: 42.20
-<br>API Data Generated: 9/21/2026 6:48:20 PM
-<br>Page Updated: September 22, 2026 6:40 PM
+<br>API Data Generated: 9/25/2026 6:27:51 PM
+<br>Page Updated: September 25, 2026 6:41 PM
 </footer>
 </div>
 </body>
