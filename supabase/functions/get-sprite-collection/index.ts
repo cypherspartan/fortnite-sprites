@@ -13,7 +13,22 @@ export default {
     async (req, ctx) => {
       try {
         const apiKey = Deno.env.get("FORTNITE_API_KEY");
-        const refreshToken = Deno.env.get("FORTNITE_REFRESH_TOKEN");
+        const { data: refreshToken, error: refreshTokenError } =
+          await ctx.supabaseAdmin.rpc("get_fortnite_refresh_token");
+
+        if (refreshTokenError) {
+          console.error(
+            "Failed to read Fortnite refresh token from Vault:",
+            refreshTokenError.message
+          );
+
+          return Response.json(
+            {
+              error: "Failed to read Fortnite refresh token from Vault",
+            },
+            { status: 500 }
+          );
+        }
 
         if (!apiKey) {
           return Response.json(
@@ -24,7 +39,7 @@ export default {
 
         if (!refreshToken) {
           return Response.json(
-            { error: "FORTNITE_REFRESH_TOKEN secret is missing" },
+            { error: "Fortnite refresh token is missing from Vault" },
             { status: 500 }
           );
         }
@@ -63,6 +78,32 @@ export default {
         const tokenData = JSON.parse(refreshBody);
 
         const accessToken = tokenData.accessToken;
+
+        const newRefreshToken = tokenData.refreshToken;
+
+        if (newRefreshToken) {
+          const { error: updateRefreshTokenError } =
+            await ctx.supabaseAdmin.rpc(
+              "update_fortnite_refresh_token",
+              {
+                new_token: newRefreshToken,
+              }
+            );
+
+          if (updateRefreshTokenError) {
+            console.error(
+              "Failed to update Fortnite refresh token in Vault:",
+              updateRefreshTokenError.message
+            );
+
+            return Response.json(
+              {
+                error: "Failed to update Fortnite refresh token in Vault",
+              },
+              { status: 500 }
+            );
+          }
+        }
 
         if (!accessToken) {
           return Response.json(
