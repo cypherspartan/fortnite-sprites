@@ -1007,7 +1007,7 @@ CypherSpartan's Fortnite Sprite Collection
     const footerMeta =
         document.getElementById('footerMeta');
 
-    const archives =
+    let archives =
         Array.isArray(data.archives)
             ? data.archives
             : [];
@@ -2507,7 +2507,14 @@ return;
 
             data =
                 newData;
-
+			
+			// Rebuild data-derived values after a refresh.
+			// Rebuild data-derived values after a refresh.
+			archives =
+			    Array.isArray(data.archives)
+			        ? data.archives
+			        : [];
+			
             // Keep the current season if it still exists.
             // Otherwise switch to the new current season.
 
