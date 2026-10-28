@@ -916,29 +916,58 @@ CypherSpartan's Fortnite Sprite Collection
 
 (async function () {
 
-    const response = await fetch(
-        'https://uzqkrcewhgndvfoxmoyq.supabase.co/functions/v1/get-sprite-data',
-        {
-            headers: {
-                'apikey': 'sb_publishable_MbCMYBEWexInNYPiAli5ww_O69S2hUH',
-               
-            }
-        }
-    );
+    // =========================================================
+    // SPRITE DATA
+    // =========================================================
 
-    if (!response.ok) {
-        throw new Error(
-            `Failed to load sprite data: ${response.status}`
+    let data = null;
+
+    const SPRITE_DATA_URL =
+        'https://uzqkrcewhgndvfoxmoyq.supabase.co/functions/v1/get-sprite-data';
+
+    const REFRESH_INTERVAL_MS =
+        5 * 60 * 1000; // 5 minutes
+
+    async function fetchSpriteData() {
+
+        const response = await fetch(
+            SPRITE_DATA_URL +
+            '?refresh=' +
+            Date.now(),
+            {
+                cache: 'no-store',
+
+                headers: {
+                    'apikey': 'YOUR_PUBLISHABLE_KEY',
+                }
+            }
         );
+
+        if (!response.ok) {
+            throw new Error(
+                `Failed to load sprite data: ${response.status}`
+            );
+        }
+
+        const newData =
+            await response.json();
+
+        newData.metadata = {
+            apiGameVersion:
+                newData.current.gameVersion,
+
+            apiGenerated:
+                'Cloud API',
+
+            generated:
+                new Date().toLocaleString()
+        };
+
+        return newData;
     }
 
-    const data = await response.json();
-
-    data.metadata = {
-        apiGameVersion: data.current.gameVersion,
-        apiGenerated: 'Cloud API',
-        generated: new Date().toLocaleString()
-    };
+    data =
+        await fetchSpriteData();
 
     let selectedSeason = data.current.key;
     let filter = 'all';
@@ -2444,6 +2473,75 @@ return;
             sortBy;
     }
 
+	    // =========================================================
+    // AUTOMATIC DATA REFRESH
+    // =========================================================
+
+    function getDataSignature(source) {
+
+        return JSON.stringify({
+            current: source.current,
+            archives: source.archives
+        });
+    }
+
+    async function refreshSpriteData() {
+
+        try {
+
+            const oldSignature =
+                getDataSignature(data);
+
+            const newData =
+                await fetchSpriteData();
+
+            const newSignature =
+                getDataSignature(newData);
+
+            if (
+                oldSignature ===
+                newSignature
+            ) {
+                return;
+            }
+
+            data =
+                newData;
+
+            // Keep the current season if it still exists.
+            // Otherwise switch to the new current season.
+
+            if (
+                selectedSeason !== 'ALL' &&
+                !data.archives?.some(
+                    season =>
+                        season.key ===
+                        selectedSeason
+                ) &&
+                data.current.key !==
+                    selectedSeason
+            ) {
+                selectedSeason =
+                    data.current.key;
+            }
+
+            render();
+
+            console.log(
+                '[Sprites] New Sprite data detected and rendered.'
+            );
+
+        }
+        catch (error) {
+
+            console.warn(
+                '[Sprites] Automatic refresh failed:',
+                error
+            );
+
+        }
+    }
+	
     // =========================================================
     // RENDER
     // =========================================================
@@ -2662,10 +2760,18 @@ return;
         );
 
     // =========================================================
-    // START
-    // =========================================================
-    loadHash();
-    render();
+// START
+// =========================================================
+
+loadHash();
+
+render();
+
+// Check Supabase every 5 minutes.
+setInterval(
+    refreshSpriteData,
+    REFRESH_INTERVAL_MS
+);
 
 })();
 
