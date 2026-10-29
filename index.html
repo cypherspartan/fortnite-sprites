@@ -788,7 +788,13 @@ h1 {
     text-align: center;
     font-size: 10px;
 }
-
+#liveStatus {
+    margin-top: 10px;
+    margin-bottom: 8px;
+    color: #86efac;
+    font-size: 11px;
+    font-weight: 900;
+}
 /* =========================================================
    MOBILE
    ========================================================= */
@@ -857,7 +863,6 @@ h1 {
 <header class='header'>
 <div class='eyebrow'>FORTNITE COLLECTION</div>
 <h1>CypherSpartan's Sprites</h1>
-<div class='subtitle'>Interactive Fortnite Sprite Collection Tracker</div>
 </header>
 <section class='dashboard'>
 <div class='dashboard-top'>
@@ -910,6 +915,7 @@ h1 {
 <main id='content'></main>
 <footer class='footer'>
 CypherSpartan's Fortnite Sprite Collection
+<div id='liveStatus'>Checking connection...</div>
 <div id='footerMeta'></div>
 </footer>
 <script>
@@ -1006,6 +1012,17 @@ CypherSpartan's Fortnite Sprite Collection
 
     const footerMeta =
         document.getElementById('footerMeta');
+	
+	const liveStatus =
+    document.getElementById('liveStatus');
+
+let lastCheckedAt = new Date();
+
+function updateLiveStatus(message, isError = false) {
+    liveStatus.textContent = message;
+    liveStatus.style.color =
+        isError ? '#fb7185' : '#86efac';
+}
 
     let archives =
         Array.isArray(data.archives)
@@ -2494,6 +2511,12 @@ return;
 
             const newData =
                 await fetchSpriteData();
+			lastCheckedAt = new Date();
+
+				updateLiveStatus(
+				    '● LIVE — Last checked: ' +
+				    lastCheckedAt.toLocaleTimeString()
+				);
 
             const newSignature =
                 getDataSignature(newData);
@@ -2540,6 +2563,11 @@ return;
 
         }
         catch (error) {
+
+					updateLiveStatus(
+		    '● CONNECTION ISSUE — Showing last loaded data',
+		    true
+		);
 
             console.warn(
                 '[Sprites] Automatic refresh failed:',
@@ -2773,6 +2801,10 @@ return;
 loadHash();
 
 render();
+updateLiveStatus(
+    '● LIVE — Last checked: ' +
+    lastCheckedAt.toLocaleTimeString()
+);	
 
 // Check Supabase every 5 minutes.
 setInterval(
