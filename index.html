@@ -1158,23 +1158,20 @@
                     
                         const result = [];
                     
-                        // Temporarily exclude C7S5 from the website.
-                        // Its Supabase data and snapshots remain untouched.
+                       
                     
-                        if (data.current.key !== 'C7S5') {
-                            result.push({
-                                key: data.current.key,
-                                chapter: Number(data.current.chapter || 0),
-                                season: Number(data.current.season || 0),
-                                name: data.current.name || 'Current',
-                                gameVersion: data.current.gameVersion || 'Unknown',
-                                dateBegin: data.current.dateBegin || '',
-                                dateEnd: data.current.dateEnd || '',
-                                current: true,
-                                families: normalizeCurrentFamilies(),
-                                stats: data.current.stats || {}
-                            });
-                        }
+                        result.push({
+                            key: data.current.key,
+                            chapter: Number(data.current.chapter || 0),
+                            season: Number(data.current.season || 0),
+                            name: data.current.name || 'Current',
+                            gameVersion: data.current.gameVersion || 'Unknown',
+                            dateBegin: data.current.dateBegin || '',
+                            dateEnd: data.current.dateEnd || '',
+                            current: true,
+                            families: normalizeCurrentFamilies(),
+                            stats: data.current.stats || {}
+                        });
                     
                         archives
                             .map(normalizeArchive)
