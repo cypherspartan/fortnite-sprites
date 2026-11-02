@@ -1171,33 +1171,46 @@ function updateLiveStatus(message, isError = false) {
             });
     }
 
-    // =========================================================
-    // NORMALIZE ARCHIVE
-    // =========================================================
-    function normalizeArchive(entry) {
+   
+	
+	// =========================================================
+	// NORMALIZE ARCHIVE
+	// =========================================================
+	function normalizeArchive(entry) {
+	
+	    const families = Array.isArray(entry.families)
+	        ? entry.families.map(family => ({
+	            name: family.name,
+	            baseKnown: !!family.baseKnown,
+	            baseOwned: !!family.baseOwned,
+	            variants: Array.isArray(family.variants)
+	                ? family.variants.map(variant => ({
+	                    name: variant.name || '',
+	                    owned: !!variant.owned,
+	                    mastered:
+	                        typeof variant.mastered === 'boolean'
+	                            ? variant.mastered
+	                            : null,
+	                    image: variant.image || '',
+	                    id: variant.id || ''
+	                }))
+	                : []
+	        }))
+	        : [];
+	
+	    return {
+	        key: entry.key,
+	        chapter: Number(entry.chapter || 0),
+	        season: Number(entry.season || 0),
+	        name: entry.name || 'Unknown',
+	        gameVersion: entry.gameVersion || 'Unknown',
+	        dateBegin: entry.dateBegin || '',
+	        dateEnd: entry.dateEnd || '',
+	        families: families,
+	        stats: entry.stats || calculateStats(families)
+	    };
+	}
 
-    const ownedVariants =
-        Array.isArray(entry.ownedVariants)
-            ? entry.ownedVariants
-            : [];
-
-    const missingVariants =
-        Array.isArray(entry.missingVariants)
-            ? entry.missingVariants
-            : [];
-
-    const ownedSprites =
-        Array.isArray(entry.owned)
-            ? entry.owned
-            : [];
-
-    const missingSprites =
-        Array.isArray(entry.missing)
-            ? entry.missing
-            : [];
-
-    const families =
-        {};
 
     // =========================================================
     // OWNED BASE SPRITES
