@@ -2801,25 +2801,34 @@ return;
 loadHash();
 window.spriteDebug = {
     selectedSeason,
+
     current: {
         key: data.current.key,
         version: data.current.gameVersion,
         familyCount: data.current.families.length,
-        families: data.current.families
-            .slice(0, 10)
-            .map(f => f.name)
+
+        familyDetails: data.current.families.map(f => ({
+            family: f.name,
+            variants: Array.isArray(f.variants)
+                ? f.variants.length
+                : 0,
+            owned: Array.isArray(f.variants)
+                ? f.variants.filter(v => v.owned).length
+                : 0
+        }))
     },
+
     archives: archives.map(s => ({
         key: s.key,
         version: s.gameVersion,
         ownedCount: s.owned?.length,
         missingCount: s.missing?.length
     })),
+
     displayedSeasons: getSelectedSeasons().map(s => ({
         key: s.key,
         version: s.gameVersion,
-        familyCount: s.families.length,
-        firstFamilies: s.families.slice(0, 10).map(f => f.name)
+        familyCount: s.families.length
     }))
 };
 
