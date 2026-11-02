@@ -2819,11 +2819,18 @@ window.spriteDebug = {
     },
 
     archives: archives.map(s => ({
-        key: s.key,
-        version: s.gameVersion,
-        ownedCount: s.owned?.length,
-        missingCount: s.missing?.length
-    })),
+    key: s.key,
+    version: s.gameVersion,
+
+    ownedCount: s.owned?.length || 0,
+    missingCount: s.missing?.length || 0,
+
+    ownedNames: (s.owned || []).map(x => x.name),
+    missingNames: (s.missing || []).map(x => x.name),
+
+    ownedVariantNames: (s.ownedVariants || []).map(x => x.spriteName),
+    missingVariantNames: (s.missingVariants || []).map(x => x.spriteName)
+})),
 
     displayedSeasons: getSelectedSeasons().map(s => ({
         key: s.key,
