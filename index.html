@@ -1097,210 +1097,47 @@
 
 
 
-                	// =========================================================
-                	// NORMALIZE ARCHIVE
-                	// =========================================================
-                	function normalizeArchive(entry) {
-
-                	    const families = Array.isArray(entry.families)
-                	        ? entry.families.map(family => ({
-                	            name: family.name,
-                	            baseKnown: !!family.baseKnown,
-                	            baseOwned: !!family.baseOwned,
-                	            variants: Array.isArray(family.variants)
-                	                ? family.variants.map(variant => ({
-                	                    name: variant.name || '',
-                	                    owned: !!variant.owned,
-                	                    mastered:
-                	                        typeof variant.mastered === 'boolean'
-                	                            ? variant.mastered
-                	                            : null,
-                	                    image: variant.image || '',
-                	                    id: variant.id || ''
-                	                }))
-                	                : []
-                	        }))
-                	        : [];
-
-                	    return {
-                	        key: entry.key,
-                	        chapter: Number(entry.chapter || 0),
-                	        season: Number(entry.season || 0),
-                	        name: entry.name || 'Unknown',
-                	        gameVersion: entry.gameVersion || 'Unknown',
-                	        dateBegin: entry.dateBegin || '',
-                	        dateEnd: entry.dateEnd || '',
-                	        families: families,
-                	        stats: entry.stats || calculateStats(families)
-                	    };
-                	}
-
-
-                    // =========================================================
-                    // OWNED BASE SPRITES
-                    // =========================================================
-                    ownedSprites.forEach(sprite => {
-
-                        const name =
-                            cleanFamilyName(
-                                sprite.name || ''
-                            );
-
-                        if (!name)
-                            return;
-
-                        if (!families[name]) {
-
-                            families[name] = {
-                                name: name,
-                                variants: []
-                            };
-                        }
-                    });
-
-                    // =========================================================
-                    // MISSING SPRITE FAMILIES
-                    // =========================================================
-                    missingSprites.forEach(sprite => {
-
-                        const name =
-                            cleanFamilyName(
-                                sprite.name || ''
-                            );
-
-                        if (!name)
-                            return;
-
-                        if (!families[name]) {
-
-                            families[name] = {
-                                name: name,
-                                variants: []
-                            };
-                        }
-                    });
-
-                    // =========================================================
-                    // OWNED VARIANTS
-                    // =========================================================
-                    ownedVariants.forEach(record => {
-
-                        const familyName =
-                            cleanFamilyName(
-                                record.spriteName || ''
-                            );
-
-                        if (!familyName)
-                            return;
-
-                        const name =
-                            variantName(
-                                record.variant &&
-                                (
-                                    record.variant.variant ||
-                                    record.variant.name
-                                )
-                            );
-
-                        if (!name)
-                            return;
-
-                        if (!families[familyName]) {
-
-                            families[familyName] = {
-                                name: familyName,
-                                variants: []
-                            };
-                        }
-
-                        const variant =
-                            record.variant || {};
-
-                        families[familyName].variants.push({
-                            name: name,
-                            owned: true,
-                            mastered:
-                                typeof variant.mastered === 'boolean'
-                                    ? variant.mastered
-                                    : null,
-                            image:
-                                variant.images &&
-                                variant.images.icon
-                                ? variant.images.icon
-                                : '',
-                                id: variant.id || ''
-                            });
-                        });
-
-                    // =========================================================
-                    // MISSING VARIANTS
-                    // =========================================================
-                    missingVariants.forEach(record => {
-
-                        const familyName =
-                            cleanFamilyName(
-                                record.spriteName || ''
-                            );
-
-                        if (!familyName)
-                            return;
-
-                        const name =
-                            variantName(
-                                record.variant &&
-                                (
-                                    record.variant.variant ||
-                                    record.variant.name
-                                )
-                            );
-
-                        if (!name)
-                            return;
-
-                        if (!families[familyName]) {
-
-                            families[familyName] = {
-                                name: familyName,
-                                variants: []
-                            };
-                        }
-
-                        const variant =
-                            record.variant || {};
-
-                        families[familyName].variants.push({
-                            name: name,
-                            owned: false,
-                            mastered: null,
-                            image:
-                                variant.images &&
-                                variant.images.icon
-                                    ? variant.images.icon
-                                    : '',
-                            id: variant.id || ''
-                        });
-                    });
-
+                	
+                        // =========================================================
+                        // NORMALIZE ARCHIVE
+                        // =========================================================
+                        function normalizeArchive(entry) {
+                    
+                            const families = Array.isArray(entry.families)
+                                ? entry.families.map(family => ({
+                                    name: family.name,
+                                    baseKnown: !!family.baseKnown,
+                                    baseOwned: !!family.baseOwned,
+                                    variants: Array.isArray(family.variants)
+                                        ? family.variants.map(variant => ({
+                                            name: variant.name || '',
+                                            owned: !!variant.owned,
+                                            mastered:
+                                                typeof variant.mastered === 'boolean'
+                                                    ? variant.mastered
+                                                    : null,
+                                            image: variant.image || '',
+                                            id: variant.id || ''
+                                        }))
+                                        : []
+                                }))
+                                : [];
+                    
                             return {
                                 key: entry.key,
                                 chapter: Number(entry.chapter || 0),
                                 season: Number(entry.season || 0),
                                 name: entry.name || 'Unknown',
-                                gameVersion:
-                                    entry.gameVersion || 'Unknown',
-                                dateBegin:
-                                    entry.dateBegin || '',
-                                dateEnd:
-                                    entry.dateEnd || '',
-                                families:
-                                    Object.values(families),
-                                stats:
-                                    entry.stats ||
-                                    calculateStats(
-                                        Object.values(families)
-                                    )
+                                gameVersion: entry.gameVersion || 'Unknown',
+                                dateBegin: entry.dateBegin || '',
+                                dateEnd: entry.dateEnd || '',
+                                families: families,
+                                stats: entry.stats || calculateStats(families)
                             };
                         }
+                    
+
+
                     
                     // =========================================================
                     // GET SEASONS
