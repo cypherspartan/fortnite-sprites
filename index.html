@@ -1281,27 +1281,27 @@
                         });
                     });
 
-                    return {
-                        key: entry.key,
-                        chapter: Number(entry.chapter || 0),
-                        season: Number(entry.season || 0),
-                        name: entry.name || 'Unknown',
-                        gameVersion:
-                            entry.gameVersion || 'Unknown',
-                        dateBegin:
-                            entry.dateBegin || '',
-                        dateEnd:
-                            entry.dateEnd || '',
-                        families:
-                            Object.values(families),
-                        stats:
-                            entry.stats ||
-                            calculateStats(
-                                Object.values(families)
-                            )
-                    };
-                }
-            }
+                            return {
+                                key: entry.key,
+                                chapter: Number(entry.chapter || 0),
+                                season: Number(entry.season || 0),
+                                name: entry.name || 'Unknown',
+                                gameVersion:
+                                    entry.gameVersion || 'Unknown',
+                                dateBegin:
+                                    entry.dateBegin || '',
+                                dateEnd:
+                                    entry.dateEnd || '',
+                                families:
+                                    Object.values(families),
+                                stats:
+                                    entry.stats ||
+                                    calculateStats(
+                                        Object.values(families)
+                                    )
+                            };
+                        }
+                    }
                     // =========================================================
                     // GET SEASONS
                     // =========================================================
