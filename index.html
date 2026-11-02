@@ -899,6 +899,18 @@
                     data =
                         await fetchSpriteData();
 
+                    console.log(
+                        'ARCHIVE DATA CHECK',
+                        data.archives.map(entry => ({
+                            key: entry.key,
+                            version: entry.gameVersion,
+                            hasFamilies: Array.isArray(entry.families),
+                            familyCount: entry.families?.length,
+                            hasOwnedVariants: Array.isArray(entry.ownedVariants),
+                            hasMissingVariants: Array.isArray(entry.missingVariants)
+                        }))
+                    );
+
                     let selectedSeason = data.current.key;
                     let filter = 'all';
                     let search = '';
