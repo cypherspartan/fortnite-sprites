@@ -1,2873 +1,2796 @@
-<!DOCTYPE html>
-<html lang='en'>
-<head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'>
-<meta name='theme-color' content='#090d14'>
-<title>CypherSpartan's Fortnite Sprites</title>
-<style>
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#090d14" />
+        <title>CypherSpartan's Fortnite Sprites</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
 
-* {
-    box-sizing: border-box;
-}
+            html {
+                scroll-behavior: smooth;
+            }
 
-html {
-    scroll-behavior: smooth;
-}
+            body {
+                margin: 0;
+                min-height: 100vh;
+                background: radial-gradient(circle at top, #1a2435 0%, #0c111b 42%, #070a10 100%);
+                color: #f5f7fa;
+                font-family: Arial, Helvetica, sans-serif;
+            }
 
-body {
-    margin: 0;
-    min-height: 100vh;
-    background:
-        radial-gradient(
-            circle at top,
-            #1a2435 0%,
-            #0c111b 42%,
-            #070a10 100%
-        );
-    color: #f5f7fa;
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-}
+            button,
+            input,
+            select {
+                font: inherit;
+            }
 
-button,
-input,
-select {
-    font: inherit;
-}
+            button {
+                cursor: pointer;
+            }
 
-button {
-    cursor: pointer;
-}
+            .container {
+                width: 100%;
+                max-width: 1450px;
+                margin: 0 auto;
+                padding: 28px 20px 60px;
+            }
 
-.container {
-    width: 100%;
-    max-width: 1450px;
-    margin: 0 auto;
-    padding: 28px 20px 60px;
-}
-
-/* =========================================================
+            /* =========================================================
    HEADER
    ========================================================= */
 
-.header {
-    text-align: center;
-    margin-bottom: 20px;
-}
+            .header {
+                text-align: center;
+                margin-bottom: 20px;
+            }
 
-.eyebrow {
-    color: #8fa3bf;
-    font-size: 11px;
-    font-weight: 900;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-bottom: 8px;
-}
+            .eyebrow {
+                color: #8fa3bf;
+                font-size: 11px;
+                font-weight: 900;
+                letter-spacing: 4px;
+                text-transform: uppercase;
+                margin-bottom: 8px;
+            }
 
-h1 {
-    margin: 0;
-    font-size: 42px;
-    line-height: 1.05;
-    font-weight: 900;
-    letter-spacing: -1px;
-}
+            h1 {
+                margin: 0;
+                font-size: 42px;
+                line-height: 1.05;
+                font-weight: 900;
+                letter-spacing: -1px;
+            }
 
-.subtitle {
-    margin-top: 8px;
-    color: #91a0b5;
-    font-size: 13px;
-}
+            .subtitle {
+                margin-top: 8px;
+                color: #91a0b5;
+                font-size: 13px;
+            }
 
-/* =========================================================
+            /* =========================================================
    TOP DASHBOARD
    ========================================================= */
 
-.dashboard {
-    background:
-        linear-gradient(
-            145deg,
-            rgba(31, 41, 58, 0.97),
-            rgba(13, 18, 28, 0.97)
-        );
-    border: 1px solid #2a374b;
-    border-radius: 18px;
-    padding: 24px;
-    box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.32);
-    margin-bottom: 18px;
-}
+            .dashboard {
+                background: linear-gradient(145deg, rgba(31, 41, 58, 0.97), rgba(13, 18, 28, 0.97));
+                border: 1px solid #2a374b;
+                border-radius: 18px;
+                padding: 24px;
+                box-shadow: 0 20px 60px rgba(0, 0, 0, 0.32);
+                margin-bottom: 18px;
+            }
 
-.dashboard-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 18px;
-    margin-bottom: 20px;
-}
+            .dashboard-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 18px;
+                margin-bottom: 20px;
+            }
 
-.dashboard-title {
-    font-size: 24px;
-    font-weight: 900;
-}
+            .dashboard-title {
+                font-size: 24px;
+                font-weight: 900;
+            }
 
-.dashboard-meta {
-    color: #8fa3bf;
-    font-size: 12px;
-    line-height: 1.7;
-}
+            .dashboard-meta {
+                color: #8fa3bf;
+                font-size: 12px;
+                line-height: 1.7;
+            }
 
-.dashboard-actions {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-}
+            .dashboard-actions {
+                display: flex;
+                gap: 8px;
+                flex-wrap: wrap;
+            }
 
-.action-button {
-    border: 1px solid #36445b;
-    background: #111824;
-    color: #f5f7fa;
-    border-radius: 10px;
-    padding: 10px 14px;
-    font-size: 12px;
-    font-weight: 900;
-    transition:
-        transform .15s ease,
-        background .15s ease;
-}
+            .action-button {
+                border: 1px solid #36445b;
+                background: #111824;
+                color: #f5f7fa;
+                border-radius: 10px;
+                padding: 10px 14px;
+                font-size: 12px;
+                font-weight: 900;
+                transition:
+                    transform 0.15s ease,
+                    background 0.15s ease;
+            }
 
-.action-button:hover {
-    transform: translateY(-1px);
-    background: #192233;
-}
+            .action-button:hover {
+                transform: translateY(-1px);
+                background: #192233;
+            }
 
-.stats {
-    display: grid;
-    grid-template-columns:
-        repeat(4, minmax(0, 1fr));
-    gap: 12px;
-}
-.stats.history-mode {
-    display: block;
-}
+            .stats {
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 12px;
+            }
+            .stats.history-mode {
+                display: block;
+            }
 
-.stats.history-mode .history-summary {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 14px;
-}
-.stat {
-    background: rgba(5, 9, 15, 0.62);
-    border: 1px solid #29364a;
-    border-radius: 12px;
-    padding: 16px;
-    text-align: center;
-}
+            .stats.history-mode .history-summary {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 14px;
+            }
+            .stat {
+                background: rgba(5, 9, 15, 0.62);
+                border: 1px solid #29364a;
+                border-radius: 12px;
+                padding: 16px;
+                text-align: center;
+            }
 
-.stat-value {
-    font-size: 26px;
-    font-weight: 900;
-}
+            .stat-value {
+                font-size: 26px;
+                font-weight: 900;
+            }
 
-.stat-label {
-    margin-top: 5px;
-    color: #8392a8;
-    font-size: 10px;
-    font-weight: 900;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-}
+            .stat-label {
+                margin-top: 5px;
+                color: #8392a8;
+                font-size: 10px;
+                font-weight: 900;
+                letter-spacing: 1.5px;
+                text-transform: uppercase;
+            }
 
-/* =========================================================
+            /* =========================================================
    SEASON TABS
    ========================================================= */
 
-.season-tabs {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    margin: 18px 0;
-}
+            .season-tabs {
+                display: flex;
+                gap: 8px;
+                flex-wrap: wrap;
+                margin: 18px 0;
+            }
 
-.season-tab {
-    border: 1px solid #29364a;
-    background: #101722;
-    color: #aebbd0;
-    border-radius: 10px;
-    padding: 10px 15px;
-    font-size: 12px;
-    font-weight: 900;
-}
+            .season-tab {
+                border: 1px solid #29364a;
+                background: #101722;
+                color: #aebbd0;
+                border-radius: 10px;
+                padding: 10px 15px;
+                font-size: 12px;
+                font-weight: 900;
+            }
 
-.season-tab:hover {
-    background: #182234;
-}
+            .season-tab:hover {
+                background: #182234;
+            }
 
-.season-tab.active {
-    background: #f5f7fa;
-    color: #0a0e15;
-    border-color: #f5f7fa;
-}
+            .season-tab.active {
+                background: #f5f7fa;
+                color: #0a0e15;
+                border-color: #f5f7fa;
+            }
 
-/* =========================================================
+            /* =========================================================
    FILTER BAR
    ========================================================= */
 
-.controls {
-    position: sticky;
-    top: 10px;
-    z-index: 50;
-    display: flex;
-    gap: 8px;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 10px;
-    margin-bottom: 20px;
-    background: rgba(7, 11, 17, 0.88);
-    border: 1px solid #263246;
-    border-radius: 14px;
-    backdrop-filter: blur(14px);
-}
+            .controls {
+                position: sticky;
+                top: 10px;
+                z-index: 50;
+                display: flex;
+                gap: 8px;
+                align-items: center;
+                flex-wrap: wrap;
+                padding: 10px;
+                margin-bottom: 20px;
+                background: rgba(7, 11, 17, 0.88);
+                border: 1px solid #263246;
+                border-radius: 14px;
+                backdrop-filter: blur(14px);
+            }
 
-.search {
-    flex: 1 1 220px;
-    min-width: 180px;
-}
+            .search {
+                flex: 1 1 220px;
+                min-width: 180px;
+            }
 
-.search input,
-.control-select {
-    width: 100%;
-    height: 40px;
-    padding: 0 13px;
-    border: 1px solid #2c394d;
-    border-radius: 9px;
-    outline: none;
-    background: #0e141f;
-    color: #f5f7fa;
-}
+            .search input,
+            .control-select {
+                width: 100%;
+                height: 40px;
+                padding: 0 13px;
+                border: 1px solid #2c394d;
+                border-radius: 9px;
+                outline: none;
+                background: #0e141f;
+                color: #f5f7fa;
+            }
 
-.search input::placeholder {
-    color: #64748b;
-}
+            .search input::placeholder {
+                color: #64748b;
+            }
 
-.filter-buttons {
-    display: flex;
-    gap: 6px;
-    flex-wrap: wrap;
-}
+            .filter-buttons {
+                display: flex;
+                gap: 6px;
+                flex-wrap: wrap;
+            }
 
-.filter-button {
-    height: 40px;
-    border: 1px solid #2c394d;
-    border-radius: 9px;
-    background: #0e141f;
-    color: #aebbd0;
-    padding: 0 12px;
-    font-size: 11px;
-    font-weight: 900;
-}
+            .filter-button {
+                height: 40px;
+                border: 1px solid #2c394d;
+                border-radius: 9px;
+                background: #0e141f;
+                color: #aebbd0;
+                padding: 0 12px;
+                font-size: 11px;
+                font-weight: 900;
+            }
 
-.filter-button.active {
-    background: #f5f7fa;
-    color: #0a0e15;
-    border-color: #f5f7fa;
-}
+            .filter-button.active {
+                background: #f5f7fa;
+                color: #0a0e15;
+                border-color: #f5f7fa;
+            }
 
-.view-toggle {
-    display: flex;
-    gap: 4px;
-    padding: 4px;
-    border: 1px solid #2c394d;
-    border-radius: 10px;
-    background: #0b1018;
-}
+            .view-toggle {
+                display: flex;
+                gap: 4px;
+                padding: 4px;
+                border: 1px solid #2c394d;
+                border-radius: 10px;
+                background: #0b1018;
+            }
 
-.view-button {
-    width: 34px;
-    height: 32px;
-    border: 0;
-    border-radius: 7px;
-    background: transparent;
-    color: #64748b;
-    font-weight: 900;
-}
+            .view-button {
+                width: 34px;
+                height: 32px;
+                border: 0;
+                border-radius: 7px;
+                background: transparent;
+                color: #64748b;
+                font-weight: 900;
+            }
 
-.view-button.active {
-    background: #1c2636;
-    color: #f5f7fa;
-}
+            .view-button.active {
+                background: #1c2636;
+                color: #f5f7fa;
+            }
 
-/* =========================================================
+            /* =========================================================
    SEASON BLOCK
    ========================================================= */
 
-.season-block {
-    margin-bottom: 42px;
-}
+            .season-block {
+                margin-bottom: 42px;
+            }
 
-.season-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    gap: 15px;
-    margin: 25px 0 14px;
-}
+            .season-heading {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+                gap: 15px;
+                margin: 25px 0 14px;
+            }
 
-.season-heading-title {
-    font-size: 25px;
-    font-weight: 900;
-}
+            .season-heading-title {
+                font-size: 25px;
+                font-weight: 900;
+            }
 
-.season-heading-meta {
-    color: #8392a8;
-    font-size: 12px;
-    line-height: 1.6;
-}
+            .season-heading-meta {
+                color: #8392a8;
+                font-size: 12px;
+                line-height: 1.6;
+            }
 
-// =========================================================
+            // =========================================================
 // ALL SEASONS OVERVIEW
 // =========================================================
 .all-seasons-overview {
-    display: grid;
-    gap: 14px;
-    margin-bottom: 30px;
-}
+                display: grid;
+                gap: 14px;
+                margin-bottom: 30px;
+            }
 
-.history-summary {
-    display: grid;
-    grid-template-columns:
-        repeat(4, minmax(0, 1fr));
-    gap: 12px;
-    margin-bottom: 18px;
-}
+            .history-summary {
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 12px;
+                margin-bottom: 18px;
+            }
 
-.history-card {
-    background:
-        linear-gradient(
-            145deg,
-            rgba(20, 29, 43, 0.96),
-            rgba(10, 15, 24, 0.96)
-        );
-    border: 1px solid #29374c;
-    border-radius: 14px;
-    padding: 20px;
-    transition:
-        transform .18s ease,
-        border-color .18s ease,
-        box-shadow .18s ease;
-}
+            .history-card {
+                background: linear-gradient(145deg, rgba(20, 29, 43, 0.96), rgba(10, 15, 24, 0.96));
+                border: 1px solid #29374c;
+                border-radius: 14px;
+                padding: 20px;
+                transition:
+                    transform 0.18s ease,
+                    border-color 0.18s ease,
+                    box-shadow 0.18s ease;
+            }
 
-.history-card:hover {
-    transform: translateY(-2px);
-    border-color: #3b4d67;
-    box-shadow:
-        0 12px 30px rgba(0, 0, 0, .25);
-}
+            .history-card:hover {
+                transform: translateY(-2px);
+                border-color: #3b4d67;
+                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+            }
 
-.history-card-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 12px;
-    margin-bottom: 14px;
-}
+            .history-card-top {
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                gap: 12px;
+                margin-bottom: 14px;
+            }
 
-.history-card-title {
-    font-size: 19px;
-    font-weight: 900;
-}
+            .history-card-title {
+                font-size: 19px;
+                font-weight: 900;
+            }
 
-.history-card-subtitle {
-    margin-top: 4px;
-    color: #8392a8;
-    font-size: 11px;
-}
+            .history-card-subtitle {
+                margin-top: 4px;
+                color: #8392a8;
+                font-size: 11px;
+            }
 
-.history-status {
-    padding: 4px 8px;
-    border-radius: 999px;
-    font-size: 8px;
-    font-weight: 900;
-    letter-spacing: 1px;
-}
+            .history-status {
+                padding: 4px 8px;
+                border-radius: 999px;
+                font-size: 8px;
+                font-weight: 900;
+                letter-spacing: 1px;
+            }
 
-.history-current {
-    color: #86efac;
-    border: 1px solid rgba(34,197,94,.35);
-    background: rgba(34,197,94,.08);
-}
+            .history-current {
+                color: #86efac;
+                border: 1px solid rgba(34, 197, 94, 0.35);
+                background: rgba(34, 197, 94, 0.08);
+            }
 
-.history-archived {
-    color: #aebbd0;
-    border: 1px solid #36445b;
-    background: rgba(54,68,91,.18);
-}
+            .history-archived {
+                color: #aebbd0;
+                border: 1px solid #36445b;
+                background: rgba(54, 68, 91, 0.18);
+            }
 
-.history-stats {
-    display: grid;
-    grid-template-columns:
-        repeat(4, minmax(0, 1fr));
-    gap: 8px;
-}
+            .history-stats {
+                display: grid;
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 8px;
+            }
 
-.history-stat {
-    background: rgba(5, 9, 15, .62);
-    border: 1px solid #29364a;
-    border-radius: 9px;
-    padding: 11px;
-    text-align: center;
-}
+            .history-stat {
+                background: rgba(5, 9, 15, 0.62);
+                border: 1px solid #29364a;
+                border-radius: 9px;
+                padding: 11px;
+                text-align: center;
+            }
 
-.history-stat-value {
-    font-size: 17px;
-    font-weight: 900;
-}
+            .history-stat-value {
+                font-size: 17px;
+                font-weight: 900;
+            }
 
-.history-stat-label {
-    margin-top: 4px;
-    color: #8392a8;
-    font-size: 8px;
-    font-weight: 900;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
+            .history-stat-label {
+                margin-top: 4px;
+                color: #8392a8;
+                font-size: 8px;
+                font-weight: 900;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
 
-.history-card-action {
-    width: 100%;
-    margin-top: 14px;
-    border: 1px solid #36445b;
-    background: #111824;
-    color: #f5f7fa;
-    border-radius: 9px;
-    padding: 10px;
-    font-size: 11px;
-    font-weight: 900;
-}
+            .history-card-action {
+                width: 100%;
+                margin-top: 14px;
+                border: 1px solid #36445b;
+                background: #111824;
+                color: #f5f7fa;
+                border-radius: 9px;
+                padding: 10px;
+                font-size: 11px;
+                font-weight: 900;
+            }
 
-.history-card-action:hover {
-    background: #192233;
-}
+            .history-card-action:hover {
+                background: #192233;
+            }
 
-@media (max-width: 900px) {
-    .history-summary {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
+            @media (max-width: 900px) {
+                .history-summary {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                }
 
-    .history-stats {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
-}
+                .history-stats {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                }
+            }
 
-@media (max-width: 600px) {
-    .history-summary {
-        grid-template-columns: 1fr;
-    }
-}
+            @media (max-width: 600px) {
+                .history-summary {
+                    grid-template-columns: 1fr;
+                }
+            }
 
-
-/* =========================================================
+            /* =========================================================
    PROGRESS
    ========================================================= */
 
-.progress-wrap {
-    margin-bottom: 18px;
-}
+            .progress-wrap {
+                margin-bottom: 18px;
+            }
 
-.progress-label {
-    display: flex;
-    justify-content: space-between;
-    color: #8fa3bf;
-    font-size: 11px;
-    font-weight: 900;
-    margin-bottom: 7px;
-}
+            .progress-label {
+                display: flex;
+                justify-content: space-between;
+                color: #8fa3bf;
+                font-size: 11px;
+                font-weight: 900;
+                margin-bottom: 7px;
+            }
 
-.progress-track {
-    height: 10px;
-    overflow: hidden;
-    border: 1px solid #253145;
-    border-radius: 999px;
-    background: #070b11;
-}
+            .progress-track {
+                height: 10px;
+                overflow: hidden;
+                border: 1px solid #253145;
+                border-radius: 999px;
+                background: #070b11;
+            }
 
-.progress-fill {
-    height: 100%;
-    border-radius: 999px;
-    background:
-        linear-gradient(
-            90deg,
-            #22c55e,
-            #5eead4
-        );
-    transition: width .35s ease;
-}
+            .progress-fill {
+                height: 100%;
+                border-radius: 999px;
+                background: linear-gradient(90deg, #22c55e, #5eead4);
+                transition: width 0.35s ease;
+            }
 
-/* =========================================================
+            /* =========================================================
    SPRITE GRID
    ========================================================= */
 
-.sprite-grid {
-    display: grid;
-    grid-template-columns:
-        repeat(3, minmax(0, 1fr));
-    gap: 12px;
-}
+            .sprite-grid {
+                display: grid;
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+                gap: 12px;
+            }
 
-.sprite-grid.list-view {
-    grid-template-columns: 1fr;
-}
+            .sprite-grid.list-view {
+                grid-template-columns: 1fr;
+            }
 
-.family {
-    position: relative;
-    min-width: 0;
-    background:
-        linear-gradient(
-            145deg,
-            rgba(20, 29, 43, 0.96),
-            rgba(10, 15, 24, 0.96)
-        );
-    border: 1px solid #29374c;
-    border-radius: 14px;
-    padding: 17px;
-    transition:
-        transform .18s ease,
-        border-color .18s ease,
-        box-shadow .18s ease;
-}
+            .family {
+                position: relative;
+                min-width: 0;
+                background: linear-gradient(145deg, rgba(20, 29, 43, 0.96), rgba(10, 15, 24, 0.96));
+                border: 1px solid #29374c;
+                border-radius: 14px;
+                padding: 17px;
+                transition:
+                    transform 0.18s ease,
+                    border-color 0.18s ease,
+                    box-shadow 0.18s ease;
+            }
 
-.family:hover {
-    transform: translateY(-2px);
-    border-color: #3b4d67;
-    box-shadow:
-        0 12px 30px rgba(0, 0, 0, .25);
-}
+            .family:hover {
+                transform: translateY(-2px);
+                border-color: #3b4d67;
+                box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+            }
 
-.family-name {
-    padding-right: 90px;
-    margin-bottom: 13px;
-    font-size: 17px;
-    font-weight: 900;
-}
+            .family-name {
+                padding-right: 90px;
+                margin-bottom: 13px;
+                font-size: 17px;
+                font-weight: 900;
+            }
 
-.family-status {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-    padding: 4px 8px;
-    border-radius: 999px;
-    font-size: 8px;
-    font-weight: 900;
-    letter-spacing: 1.2px;
-}
+            .family-status {
+                position: absolute;
+                top: 15px;
+                right: 15px;
+                padding: 4px 8px;
+                border-radius: 999px;
+                font-size: 8px;
+                font-weight: 900;
+                letter-spacing: 1.2px;
+            }
 
-.status-complete {
-    color: #86efac;
-    border: 1px solid rgba(34,197,94,.35);
-    background: rgba(34,197,94,.08);
-}
+            .status-complete {
+                color: #86efac;
+                border: 1px solid rgba(34, 197, 94, 0.35);
+                background: rgba(34, 197, 94, 0.08);
+            }
 
-.status-progress {
-    color: #fde68a;
-    border: 1px solid rgba(234,179,8,.35);
-    background: rgba(234,179,8,.08);
-}
+            .status-progress {
+                color: #fde68a;
+                border: 1px solid rgba(234, 179, 8, 0.35);
+                background: rgba(234, 179, 8, 0.08);
+            }
 
-.status-missing {
-    color: #fb7185;
-    border: 1px solid rgba(244,63,94,.35);
-    background: rgba(244,63,94,.08);
-}
+            .status-missing {
+                color: #fb7185;
+                border: 1px solid rgba(244, 63, 94, 0.35);
+                background: rgba(244, 63, 94, 0.08);
+            }
 
-.variants {
-    display: grid;
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-    gap: 7px;
-}
+            .variants {
+                display: grid;
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 7px;
+            }
 
-.variant {
-    display: flex;
-    align-items: center;
-    min-width: 0;
-    min-height: 62px;
-    gap: 8px;
-    padding: 7px;
-    border: 1px solid;
-    border-radius: 9px;
-    font-size: 10px;
-    font-weight: 900;
-    transition:
-        transform .15s ease,
-        filter .15s ease;
-}
+            .variant {
+                display: flex;
+                align-items: center;
+                min-width: 0;
+                min-height: 62px;
+                gap: 8px;
+                padding: 7px;
+                border: 1px solid;
+                border-radius: 9px;
+                font-size: 10px;
+                font-weight: 900;
+                transition:
+                    transform 0.15s ease,
+                    filter 0.15s ease;
+            }
 
-.variant:hover {
-    transform: translateY(-1px);
-}
+            .variant:hover {
+                transform: translateY(-1px);
+            }
 
-.variant-icon {
-    width: 45px;
-    height: 45px;
-    flex: 0 0 45px;
-    object-fit: contain;
-    border-radius: 5px;
-}
+            .variant-icon {
+                width: 45px;
+                height: 45px;
+                flex: 0 0 45px;
+                object-fit: contain;
+                border-radius: 5px;
+            }
 
-.variant-info {
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-}
+            .variant-info {
+                min-width: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 3px;
+            }
 
-.variant-name {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
+            .variant-name {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
 
-.variant-status {
-    color: #8190a5;
-    font-size: 8px;
-    letter-spacing: .5px;
-}
+            .variant-status {
+                color: #8190a5;
+                font-size: 8px;
+                letter-spacing: 0.5px;
+            }
 
-.variant-owned {
-    color: #d1fae5;
-    background:
-        linear-gradient(
-            145deg,
-            rgba(34,197,94,.13),
-            rgba(7,11,17,.75)
-        );
-    border-color: rgba(34,197,94,.35);
-}
+            .variant-owned {
+                color: #d1fae5;
+                background: linear-gradient(145deg, rgba(34, 197, 94, 0.13), rgba(7, 11, 17, 0.75));
+                border-color: rgba(34, 197, 94, 0.35);
+            }
 
-.variant-missing {
-    color: #fecdd3;
-    background:
-        linear-gradient(
-            145deg,
-            rgba(244,63,94,.07),
-            rgba(7,11,17,.88)
-        );
-    border-color: rgba(244,63,94,.27);
-    opacity: .7;
-}
+            .variant-missing {
+                color: #fecdd3;
+                background: linear-gradient(145deg, rgba(244, 63, 94, 0.07), rgba(7, 11, 17, 0.88));
+                border-color: rgba(244, 63, 94, 0.27);
+                opacity: 0.7;
+            }
 
-.variant-missing .variant-icon {
-    filter:
-        grayscale(100%)
-        brightness(.55);
-}
+            .variant-missing .variant-icon {
+                filter: grayscale(100%) brightness(0.55);
+            }
 
-.variant-base {
-    border-color: rgba(148,163,184,.28);
-}
+            .variant-base {
+                border-color: rgba(148, 163, 184, 0.28);
+            }
 
-.variant-gold {
-    color: #fde68a;
-    background:
-        linear-gradient(
-            145deg,
-            rgba(234,179,8,.14),
-            rgba(7,11,17,.78)
-        );
-    border-color: rgba(234,179,8,.35);
-}
+            .variant-gold {
+                color: #fde68a;
+                background: linear-gradient(145deg, rgba(234, 179, 8, 0.14), rgba(7, 11, 17, 0.78));
+                border-color: rgba(234, 179, 8, 0.35);
+            }
 
-.variant-cheatmaster {
-    color: #c4b5fd;
-    background:
-        linear-gradient(
-            145deg,
-            rgba(139,92,246,.14),
-            rgba(7,11,17,.78)
-        );
-    border-color: rgba(139,92,246,.35);
-}
+            .variant-cheatmaster {
+                color: #c4b5fd;
+                background: linear-gradient(145deg, rgba(139, 92, 246, 0.14), rgba(7, 11, 17, 0.78));
+                border-color: rgba(139, 92, 246, 0.35);
+            }
 
-.variant-loothacker {
-    color: #67e8f9;
-    background:
-        linear-gradient(
-            145deg,
-            rgba(6,182,212,.14),
-            rgba(7,11,17,.78)
-        );
-    border-color: rgba(6,182,212,.35);
-}
+            .variant-loothacker {
+                color: #67e8f9;
+                background: linear-gradient(145deg, rgba(6, 182, 212, 0.14), rgba(7, 11, 17, 0.78));
+                border-color: rgba(6, 182, 212, 0.35);
+            }
 
-.variant-bounty {
-    color: #fda4af;
-    background:
-        linear-gradient(
-            145deg,
-            rgba(244,63,94,.12),
-            rgba(7,11,17,.78)
-        );
-    border-color: rgba(244,63,94,.32);
-}
+            .variant-bounty {
+                color: #fda4af;
+                background: linear-gradient(145deg, rgba(244, 63, 94, 0.12), rgba(7, 11, 17, 0.78));
+                border-color: rgba(244, 63, 94, 0.32);
+            }
 
-.variant-mastered {
-    box-shadow:
-        0 0 13px rgba(250,204,21,.28),
-        inset 0 0 10px rgba(250,204,21,.05);
-}
+            .variant-mastered {
+                box-shadow:
+                    0 0 13px rgba(250, 204, 21, 0.28),
+                    inset 0 0 10px rgba(250, 204, 21, 0.05);
+            }
 
-.variant-mastered .variant-status {
-    color: #fde047;
-}
+            .variant-mastered .variant-status {
+                color: #fde047;
+            }
 
-.new-badge {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: fit-content;
-    padding: 2px 5px;
-    border-radius: 4px;
-    background: #2563eb;
-    color: white;
-    font-size: 7px;
-    letter-spacing: 1px;
-}
+            .new-badge {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: fit-content;
+                padding: 2px 5px;
+                border-radius: 4px;
+                background: #2563eb;
+                color: white;
+                font-size: 7px;
+                letter-spacing: 1px;
+            }
 
-/* =========================================================
+            /* =========================================================
    LIST VIEW
    ========================================================= */
 
-.list-view .family {
-    display: grid;
-    grid-template-columns: 190px 1fr;
-    align-items: start;
-    gap: 15px;
-}
+            .list-view .family {
+                display: grid;
+                grid-template-columns: 190px 1fr;
+                align-items: start;
+                gap: 15px;
+            }
 
-.list-view .family-name {
-    padding-right: 0;
-    margin: 3px 0 0;
-}
+            .list-view .family-name {
+                padding-right: 0;
+                margin: 3px 0 0;
+            }
 
-.list-view .family-status {
-    position: static;
-    grid-column: 1;
-    width: fit-content;
-    margin-top: 28px;
-}
+            .list-view .family-status {
+                position: static;
+                grid-column: 1;
+                width: fit-content;
+                margin-top: 28px;
+            }
 
-.list-view .variants {
-    grid-column: 2;
-}
+            .list-view .variants {
+                grid-column: 2;
+            }
 
-/* =========================================================
+            /* =========================================================
    EMPTY STATE
    ========================================================= */
 
-.empty {
-    padding: 45px 20px;
-    text-align: center;
-    color: #8190a5;
-    border: 1px dashed #2c394d;
-    border-radius: 14px;
-    background: rgba(7,11,17,.45);
-}
+            .empty {
+                padding: 45px 20px;
+                text-align: center;
+                color: #8190a5;
+                border: 1px dashed #2c394d;
+                border-radius: 14px;
+                background: rgba(7, 11, 17, 0.45);
+            }
 
-/* =========================================================
+            /* =========================================================
    FOOTER
    ========================================================= */
 
-.footer {
-    margin-top: 50px;
-    padding-top: 20px;
-    border-top: 1px solid #202b3c;
-    color: #64748b;
-    text-align: center;
-    font-size: 10px;
-}
-#liveStatus {
-    margin-top: 10px;
-    margin-bottom: 8px;
-    color: #86efac;
-    font-size: 11px;
-    font-weight: 900;
-}
-/* =========================================================
+            .footer {
+                margin-top: 50px;
+                padding-top: 20px;
+                border-top: 1px solid #202b3c;
+                color: #64748b;
+                text-align: center;
+                font-size: 10px;
+            }
+            #liveStatus {
+                margin-top: 10px;
+                margin-bottom: 8px;
+                color: #86efac;
+                font-size: 11px;
+                font-weight: 900;
+            }
+            /* =========================================================
    MOBILE
    ========================================================= */
 
-@media (max-width: 1050px) {
-    .sprite-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
-}
-
-@media (max-width: 700px) {
-    .container {
-        padding: 18px 10px 40px;
-    }
-
-    h1 {
-        font-size: 30px;
-    }
-
-    .dashboard-top {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .stats {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
-
-    .sprite-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .list-view .family {
-        display: block;
-    }
-
-    .list-view .family-status {
-        margin: 0 0 8px;
-    }
-
-    .list-view .variants {
-        display: grid;
-    }
-}
-
-@media (max-width: 480px) {
-    .stats {
-        grid-template-columns: 1fr;
-    }
-
-    .variants {
-        grid-template-columns: 1fr;
-    }
-
-    .controls {
-        position: static;
-    }
-}
-
-</style>
-</head>
-<body>
-<div class='container'>
-<header class='header'>
-<div class='eyebrow'>FORTNITE COLLECTION</div>
-<h1>CypherSpartan's Sprites</h1>
-</header>
-<section class='dashboard'>
-<div class='dashboard-top'>
-<div>
-<div id='dashboardTitle' class='dashboard-title'></div>
-<div id='dashboardMeta' class='dashboard-meta'></div>
-</div>
-<div class='dashboard-actions'>
-<button id='copyLink' class='action-button'>🔗 Copy Link</button>
-<button id='saveImage' class='action-button'>▣ Save Image</button>
-</div>
-</div>
-<div id='stats' class='stats'></div>
-</section>
-<div id='seasonTabs' class='season-tabs'></div>
-<div class='controls'>
-<div class='search'>
-<input id='search' type='search' placeholder='🔎 Search sprites or variants...'>
-</div>
-<div class='filter-buttons'>
-<button class='filter-button active' data-filter='all'>All</button>
-<button class='filter-button' data-filter='owned'>Owned</button>
-<button class='filter-button' data-filter='missing'>Missing</button>
-<button class='filter-button' data-filter='mastered'>★ Mastered</button>
-<button class='filter-button' data-filter='new'>New</button>
-</div>
-<div style='min-width:130px;'>
-<select id='variantFilter' class='control-select'>
-<option value='all'>Variant: All</option>
-</select>
-</div>
-<div style='min-width:150px;'>
-<select id='spriteFilter' class='control-select'>
-<option value='all'>Sprite: All</option>
-</select>
-</div>
-<div style='min-width:145px;'>
-<select id='sortBy' class='control-select'>
-<option value='name'>Sort: Name</option>
-<option value='completion'>Sort: Completion</option>
-<option value='owned'>Sort: Owned</option>
-<option value='missing'>Sort: Missing</option>
-</select>
-</div>
-<div class='view-toggle'>
-<button id='gridView' class='view-button active'>▦</button>
-<button id='listView' class='view-button'>☰</button>
-</div>
-</div>
-<main id='content'></main>
-<footer class='footer'>
-CypherSpartan's Fortnite Sprite Collection
-<div id='liveStatus'>Checking connection...</div>
-<div id='footerMeta'></div>
-</footer>
-<script>
-
-(async function () {
-
-    // =========================================================
-    // SPRITE DATA
-    // =========================================================
-
-    let data = null;
-
-    const SPRITE_DATA_URL =
-        'https://uzqkrcewhgndvfoxmoyq.supabase.co/functions/v1/get-sprite-data';
-
-    const REFRESH_INTERVAL_MS =
-        5 * 60 * 1000; // 5 minutes
-
-    async function fetchSpriteData() {
-
-        const response = await fetch(
-            SPRITE_DATA_URL +
-            '?refresh=' +
-            Date.now(),
-            {
-                cache: 'no-store',
-
-                headers: {
-                    'apikey': 'sb_publishable_MbCMYBEWexInNYPiAli5ww_O69S2hUH',
+            @media (max-width: 1050px) {
+                .sprite-grid {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
                 }
             }
-        );
 
-        if (!response.ok) {
-            throw new Error(
-                `Failed to load sprite data: ${response.status}`
-            );
-        }
-
-        const newData =
-            await response.json();
-
-        newData.metadata = {
-            apiGameVersion:
-                newData.current.gameVersion,
-
-            apiGenerated:
-                'Cloud API',
-
-            generated:
-                new Date().toLocaleString()
-        };
-
-        return newData;
-    }
-
-    data =
-        await fetchSpriteData();
-
-    let selectedSeason = data.current.key;
-    let filter = 'all';
-    let search = '';
-    let variantFilter = 'all';
-    let spriteFilter = 'all';
-    let sortBy = 'name';
-    let view = 'grid';
-
-    const dashboardTitle =
-        document.getElementById('dashboardTitle');
-
-    const dashboardMeta =
-        document.getElementById('dashboardMeta');
-
-    const stats =
-        document.getElementById('stats');
-
-    const seasonTabs =
-        document.getElementById('seasonTabs');
-
-    const content =
-        document.getElementById('content');
-
-    const searchInput =
-        document.getElementById('search');
-
-    const variantSelect =
-        document.getElementById('variantFilter');
-
-    const spriteSelect =
-        document.getElementById('spriteFilter');
-
-    const sortSelect =
-        document.getElementById('sortBy');
-
-    const footerMeta =
-        document.getElementById('footerMeta');
-	
-	const liveStatus =
-    document.getElementById('liveStatus');
-
-let lastCheckedAt = new Date();
-
-function updateLiveStatus(message, isError = false) {
-    liveStatus.textContent = message;
-    liveStatus.style.color =
-        isError ? '#fb7185' : '#86efac';
-}
-
-    let archives =
-        Array.isArray(data.archives)
-            ? data.archives
-            : [];
-
-    // =========================================================
-    // HTML ESCAPE
-    // =========================================================
-    function escapeHtml(value) {
-
-        return String(value ?? '')
-            .replace(/&/g, '&amp;')
-            .replace(/</g, '&lt;')
-            .replace(/>/g, '&gt;')
-            .replace(/"/g, '&quot;')
-            .replace(/'/g, '&#039;');
-    }
-
-        // =========================================================
-        // CLEAN FAMILY NAME
-        // =========================================================
-        function cleanFamilyName(name) {
-
-            if (!name)
-                return '';
-
-            name =
-                String(name)
-                    .trim();
-
-            if (
-                name.toLowerCase().endsWith(' sprite')
-            ) {
-                name =
-                    name.substring(
-                        0,
-                        name.length - 7
-                    ).trim();
-            }
-
-            return name;
-        }
-    // =========================================================
-    // VARIANT NAME
-    // =========================================================
-    function variantName(value) {
-
-        let name =
-            String(value ?? '');
-
-        if (
-            name.toLowerCase() ===
-            'reaper'
-        ) {
-            return 'Bounty Hunter';
-        }
-
-        if (
-            name.toLowerCase() ===
-            'tricktreat'
-        ) {
-            return 'Trick Or Treat';
-        }
-
-        return name;
-    }
-
-    // =========================================================
-    // VARIANT CLASS
-    // =========================================================
-    function variantClass(name, owned) {
-
-        if (!owned)
-            return 'variant-missing';
-
-        const lower =
-            name.toLowerCase();
-
-        if (lower === 'base')
-            return 'variant-base';
-
-        if (lower === 'gold')
-            return 'variant-gold';
-
-        if (lower === 'cheatmaster')
-            return 'variant-cheatmaster';
-
-        if (lower === 'loothacker')
-            return 'variant-loothacker';
-
-        if (lower === 'bounty hunter')
-            return 'variant-bounty';
-
-		if (lower === 'trick or treat')
-			return 'variant-tricktreat';
-
-        return 'variant-owned';
-    }
-
-    // =========================================================
-    // VARIANT SORT
-    // =========================================================
-    function variantOrder(name) {
-
-        const lower =
-            name.toLowerCase();
-
-        if (lower === 'base')
-            return 0;
-
-        if (lower === 'gold')
-            return 1;
-
-        if (lower === 'cheatmaster')
-            return 2;
-
-        if (lower === 'loothacker')
-            return 3;
-
-        if (lower === 'bounty hunter')
-            return 4;
-
-		if (lower === 'trick or treat')
-			return 5;
-
-		return 100;
-    }
-
-    // =========================================================
-    // NORMALIZE CURRENT FAMILY DATA
-    // =========================================================
-    function normalizeCurrentFamilies() {
-
-        return (data.current.families || [])
-            .map(family => {
-
-                return {
-                    name: family.name,
-                    baseKnown: !!family.baseKnown,
-                    variants:
-                        Array.isArray(family.variants)
-                            ? family.variants
-                            : []
-                };
-            });
-    }
-
-   
-	
-	// =========================================================
-	// NORMALIZE ARCHIVE
-	// =========================================================
-	function normalizeArchive(entry) {
-	
-	    const families = Array.isArray(entry.families)
-	        ? entry.families.map(family => ({
-	            name: family.name,
-	            baseKnown: !!family.baseKnown,
-	            baseOwned: !!family.baseOwned,
-	            variants: Array.isArray(family.variants)
-	                ? family.variants.map(variant => ({
-	                    name: variant.name || '',
-	                    owned: !!variant.owned,
-	                    mastered:
-	                        typeof variant.mastered === 'boolean'
-	                            ? variant.mastered
-	                            : null,
-	                    image: variant.image || '',
-	                    id: variant.id || ''
-	                }))
-	                : []
-	        }))
-	        : [];
-	
-	    return {
-	        key: entry.key,
-	        chapter: Number(entry.chapter || 0),
-	        season: Number(entry.season || 0),
-	        name: entry.name || 'Unknown',
-	        gameVersion: entry.gameVersion || 'Unknown',
-	        dateBegin: entry.dateBegin || '',
-	        dateEnd: entry.dateEnd || '',
-	        families: families,
-	        stats: entry.stats || calculateStats(families)
-	    };
-	}
-
-
-    // =========================================================
-    // OWNED BASE SPRITES
-    // =========================================================
-    ownedSprites.forEach(sprite => {
-
-        const name =
-            cleanFamilyName(
-                sprite.name || ''
-            );
-
-        if (!name)
-            return;
-
-        if (!families[name]) {
-
-            families[name] = {
-                name: name,
-                variants: []
-            };
-        }
-    });
-
-    // =========================================================
-    // MISSING SPRITE FAMILIES
-    // =========================================================
-    missingSprites.forEach(sprite => {
-
-        const name =
-            cleanFamilyName(
-                sprite.name || ''
-            );
-
-        if (!name)
-            return;
-
-        if (!families[name]) {
-
-            families[name] = {
-                name: name,
-                variants: []
-            };
-        }
-    });
-
-    // =========================================================
-    // OWNED VARIANTS
-    // =========================================================
-    ownedVariants.forEach(record => {
-
-        const familyName =
-            cleanFamilyName(
-                record.spriteName || ''
-            );
-
-        if (!familyName)
-            return;
-
-        const name =
-            variantName(
-                record.variant &&
-                (
-                    record.variant.variant ||
-                    record.variant.name
-                )
-            );
-
-        if (!name)
-            return;
-
-        if (!families[familyName]) {
-
-            families[familyName] = {
-                name: familyName,
-                variants: []
-            };
-        }
-
-        const variant =
-            record.variant || {};
-
-        families[familyName].variants.push({
-            name: name,
-            owned: true,
-            mastered:
-                typeof variant.mastered === 'boolean'
-                    ? variant.mastered
-                    : null,
-            image:
-                variant.images &&
-                variant.images.icon
-                ? variant.images.icon
-                : '',
-                id: variant.id || ''
-            });
-        });
-
-    // =========================================================
-    // MISSING VARIANTS
-    // =========================================================
-    missingVariants.forEach(record => {
-
-        const familyName =
-            cleanFamilyName(
-                record.spriteName || ''
-            );
-
-        if (!familyName)
-            return;
-
-        const name =
-            variantName(
-                record.variant &&
-                (
-                    record.variant.variant ||
-                    record.variant.name
-                )
-            );
-
-        if (!name)
-            return;
-
-        if (!families[familyName]) {
-
-            families[familyName] = {
-                name: familyName,
-                variants: []
-            };
-        }
-
-        const variant =
-            record.variant || {};
-
-        families[familyName].variants.push({
-            name: name,
-            owned: false,
-            mastered: null,
-            image:
-                variant.images &&
-                variant.images.icon
-                    ? variant.images.icon
-                    : '',
-            id: variant.id || ''
-        });
-    });
-
-    return {
-        key: entry.key,
-        chapter: Number(entry.chapter || 0),
-        season: Number(entry.season || 0),
-        name: entry.name || 'Unknown',
-        gameVersion:
-            entry.gameVersion || 'Unknown',
-        dateBegin:
-            entry.dateBegin || '',
-        dateEnd:
-            entry.dateEnd || '',
-        families:
-            Object.values(families),
-        stats:
-            entry.stats ||
-            calculateStats(
-                Object.values(families)
-            )
-    };
-}
-
-    // =========================================================
-    // GET SEASONS
-    // =========================================================
-    function getSeasons() {
-
-        const result = [
-            {
-                key: data.current.key,
-                chapter: Number(data.current.chapter || 0),
-                season: Number(data.current.season || 0),
-                name: data.current.name || 'Current',
-                gameVersion:
-                    data.current.gameVersion || 'Unknown',
-                dateBegin:
-                    data.current.dateBegin || '',
-                dateEnd:
-                    data.current.dateEnd || '',
-                current: true,
-                families:
-                    normalizeCurrentFamilies(),
-                stats:
-                    data.current.stats || {}
-            }
-        ];
-
-        archives
-            .map(normalizeArchive)
-            .forEach(entry => {
-
-                result.push({
-                    ...entry,
-                    current: false,
-                    stats:
-                        entry.stats ||
-                        calculateStats(
-                            entry.families)
-                });
-            });
-
-        return result;
-    }
-
-    // =========================================================
-    // CALCULATE STATS
-    // =========================================================
-    function calculateStats(families) {
-
-        let totalVariants = 0;
-        let ownedVariants = 0;
-        let mastered = 0;
-        let masterable = 0;
-        let ownedFamilies = 0;
-
-        families.forEach(family => {
-
-            let familyOwned = false;
-
-            family.variants.forEach(v => {
-
-                if (v.name.toLowerCase() === 'base' && v.owned)
-                    familyOwned = true;
-
-                if (!v.owned && v.name.toLowerCase() === 'base')
-                    totalVariants++;
-
-                if (v.name.toLowerCase() !== 'base')
-                    totalVariants++;
-
-                if (v.owned) {
-                    ownedVariants++;
-                    familyOwned = true;
+            @media (max-width: 700px) {
+                .container {
+                    padding: 18px 10px 40px;
                 }
 
-                if (
-                    v.owned &&
-                    v.mastered !== null &&
-                    typeof v.mastered !== 'undefined'
-                ) {
-                    masterable++;
-
-                    if (v.mastered)
-                        mastered++;
+                h1 {
+                    font-size: 30px;
                 }
-            });
 
-            if (familyOwned)
-                ownedFamilies++;
-        });
+                .dashboard-top {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
 
-        const totalFamilies =
-            families.length;
+                .stats {
+                    grid-template-columns: repeat(2, minmax(0, 1fr));
+                }
 
-        const completion =
-            totalVariants > 0
-                ? (ownedVariants / totalVariants) * 100
-                : 0;
+                .sprite-grid {
+                    grid-template-columns: 1fr;
+                }
 
-        return {
-            ownedVariants,
-            totalVariants,
-            ownedFamilies,
-            totalFamilies,
-            completionPercent: completion,
-            masteredVariantCount: mastered,
-            ownedMasterableVariantCount: masterable
-        };
-    }
+                .list-view .family {
+                    display: block;
+                }
 
-    // =========================================================
-    // GET SELECTED SEASONS
-    // =========================================================
-    function getSelectedSeasons() {
+                .list-view .family-status {
+                    margin: 0 0 8px;
+                }
 
-        const seasons =
-            getSeasons();
+                .list-view .variants {
+                    display: grid;
+                }
+            }
 
-        if (selectedSeason === 'ALL')
-            return seasons;
+            @media (max-width: 480px) {
+                .stats {
+                    grid-template-columns: 1fr;
+                }
 
-        return seasons.filter(
-            season =>
-                season.key === selectedSeason
-        );
-    }
+                .variants {
+                    grid-template-columns: 1fr;
+                }
 
-    // =========================================================
-    // RENDER SEASON TABS
-    // =========================================================
-    function renderSeasonTabs() {
+                .controls {
+                    position: static;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <div class="eyebrow">FORTNITE COLLECTION</div>
+                <h1>CypherSpartan's Sprites</h1>
+            </header>
+            <section class="dashboard">
+                <div class="dashboard-top">
+                    <div>
+                        <div id="dashboardTitle" class="dashboard-title"></div>
+                        <div id="dashboardMeta" class="dashboard-meta"></div>
+                    </div>
+                    <div class="dashboard-actions">
+                        <button id="copyLink" class="action-button">🔗 Copy Link</button>
+                        <button id="saveImage" class="action-button">▣ Save Image</button>
+                    </div>
+                </div>
+                <div id="stats" class="stats"></div>
+            </section>
+            <div id="seasonTabs" class="season-tabs"></div>
+            <div class="controls">
+                <div class="search">
+                    <input id="search" type="search" placeholder="🔎 Search sprites or variants..." />
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-button active" data-filter="all">All</button>
+                    <button class="filter-button" data-filter="owned">Owned</button>
+                    <button class="filter-button" data-filter="missing">Missing</button>
+                    <button class="filter-button" data-filter="mastered">★ Mastered</button>
+                    <button class="filter-button" data-filter="new">New</button>
+                </div>
+                <div style="min-width: 130px">
+                    <select id="variantFilter" class="control-select">
+                        <option value="all">Variant: All</option>
+                    </select>
+                </div>
+                <div style="min-width: 150px">
+                    <select id="spriteFilter" class="control-select">
+                        <option value="all">Sprite: All</option>
+                    </select>
+                </div>
+                <div style="min-width: 145px">
+                    <select id="sortBy" class="control-select">
+                        <option value="name">Sort: Name</option>
+                        <option value="completion">Sort: Completion</option>
+                        <option value="owned">Sort: Owned</option>
+                        <option value="missing">Sort: Missing</option>
+                    </select>
+                </div>
+                <div class="view-toggle">
+                    <button id="gridView" class="view-button active">▦</button>
+                    <button id="listView" class="view-button">☰</button>
+                </div>
+            </div>
+            <main id="content"></main>
+            <footer class="footer">
+                CypherSpartan's Fortnite Sprite Collection
+                <div id="liveStatus">Checking connection...</div>
+                <div id="footerMeta"></div>
+            </footer>
+            <script>
 
-        const seasons =
-            getSeasons();
+                (async function () {
 
-        let html = '';
+                    // =========================================================
+                    // SPRITE DATA
+                    // =========================================================
 
-        html +=
-            '<button class="season-tab ' +
-            (selectedSeason === 'ALL'
-                ? 'active'
-                : '') +
-            '" data-season="ALL">All Seasons</button>';
+                    let data = null;
 
-        seasons.forEach(season => {
+                    const SPRITE_DATA_URL =
+                        'https://uzqkrcewhgndvfoxmoyq.supabase.co/functions/v1/get-sprite-data';
 
-            html +=
-                '<button class="season-tab ' +
-                (selectedSeason === season.key
-                    ? 'active'
-                    : '') +
-                '" data-season="' +
-                escapeHtml(season.key) +
-                '">';
+                    const REFRESH_INTERVAL_MS =
+                        5 * 60 * 1000; // 5 minutes
 
-            html +=
-                'C' +
-                season.chapter +
-                ' S' +
-                season.season;
+                    async function fetchSpriteData() {
 
-            html +=
-                '</button>';
-        });
+                        const response = await fetch(
+                            SPRITE_DATA_URL +
+                            '?refresh=' +
+                            Date.now(),
+                            {
+                                cache: 'no-store',
 
-        seasonTabs.innerHTML =
-            html;
+                                headers: {
+                                    'apikey': 'sb_publishable_MbCMYBEWexInNYPiAli5ww_O69S2hUH',
+                                }
+                            }
+                        );
 
-        seasonTabs
-            .querySelectorAll('.season-tab')
-            .forEach(button => {
+                        if (!response.ok) {
+                            throw new Error(
+                                `Failed to load sprite data: ${response.status}`
+                            );
+                        }
 
-                button.addEventListener(
-                    'click',
-                    function () {
+                        const newData =
+                            await response.json();
 
-                        selectedSeason =
-                            this.dataset.season;
+                        newData.metadata = {
+                            apiGameVersion:
+                                newData.current.gameVersion,
 
-                        updateHash();
-                        render();
+                            apiGenerated:
+                                'Cloud API',
+
+                            generated:
+                                new Date().toLocaleString()
+                        };
+
+                        return newData;
                     }
-                );
-            });
-    }
 
-    // =========================================================
-    // BUILD FILTER OPTIONS
-    // =========================================================
-    function buildFilterOptions() {
+                    data =
+                        await fetchSpriteData();
 
-        const families =
-            getSelectedSeasons()
-                .flatMap(
-                    season => season.families
-                );
+                    let selectedSeason = data.current.key;
+                    let filter = 'all';
+                    let search = '';
+                    let variantFilter = 'all';
+                    let spriteFilter = 'all';
+                    let sortBy = 'name';
+                    let view = 'grid';
 
-        const variantNames =
-            new Set();
+                    const dashboardTitle =
+                        document.getElementById('dashboardTitle');
 
-        const spriteNames =
-            new Set();
+                    const dashboardMeta =
+                        document.getElementById('dashboardMeta');
 
-        families.forEach(family => {
+                    const stats =
+                        document.getElementById('stats');
 
-            spriteNames.add(
-                family.name
-            );
+                    const seasonTabs =
+                        document.getElementById('seasonTabs');
 
-            family.variants.forEach(v => {
+                    const content =
+                        document.getElementById('content');
 
-                variantNames.add(
-                    v.name
-                );
-            });
-        });
+                    const searchInput =
+                        document.getElementById('search');
 
-        const sortedVariants =
-            Array.from(variantNames)
-                .sort(
-                    (a, b) =>
-                        variantOrder(a) -
-                        variantOrder(b) ||
-                        a.localeCompare(b)
-                );
+                    const variantSelect =
+                        document.getElementById('variantFilter');
 
-        const sortedSprites =
-            Array.from(spriteNames)
-                .sort(
-                    (a, b) =>
-                        a.localeCompare(b)
-                );
+                    const spriteSelect =
+                        document.getElementById('spriteFilter');
 
-        const oldVariant =
-            variantFilter;
+                    const sortSelect =
+                        document.getElementById('sortBy');
 
-        const oldSprite =
-            spriteFilter;
+                    const footerMeta =
+                        document.getElementById('footerMeta');
 
-        variantSelect.innerHTML =
-            '<option value="all">Variant: All</option>';
+                	const liveStatus =
+                    document.getElementById('liveStatus');
 
-        sortedVariants.forEach(name => {
+                let lastCheckedAt = new Date();
 
-            variantSelect.innerHTML +=
-                '<option value="' +
-                escapeHtml(name) +
-                '">' +
-                escapeHtml(name) +
-                '</option>';
-        });
-
-        spriteSelect.innerHTML =
-            '<option value="all">Sprite: All</option>';
-
-        sortedSprites.forEach(name => {
-
-            spriteSelect.innerHTML +=
-                '<option value="' +
-                escapeHtml(name) +
-                '">' +
-                escapeHtml(name) +
-                '</option>';
-        });
-
-        if (
-            sortedVariants.includes(oldVariant)
-        ) {
-            variantSelect.value =
-                oldVariant;
-        }
-        else {
-            variantFilter = 'all';
-            variantSelect.value = 'all';
-        }
-
-        if (
-            sortedSprites.includes(oldSprite)
-        ) {
-            spriteSelect.value =
-                oldSprite;
-        }
-        else {
-            spriteFilter = 'all';
-            spriteSelect.value = 'all';
-        }
-    }
-
-    // =========================================================
-    // FILTER FAMILY
-    // =========================================================
-    function filterFamily(family, season) {
-
-        const query =
-            search.trim().toLowerCase();
-
-        if (
-            query &&
-            !family.name.toLowerCase().includes(query) &&
-            !family.variants.some(
-                v =>
-                    v.name.toLowerCase().includes(query)
-            )
-        ) {
-            return null;
-        }
-
-        if (
-            spriteFilter !== 'all' &&
-            family.name !== spriteFilter
-        ) {
-            return null;
-        }
-
-        let variants =
-            family.variants.slice();
-
-        if (variantFilter !== 'all') {
-
-            variants =
-                variants.filter(
-                    v =>
-                        v.name === variantFilter
-                );
-        }
-
-        if (filter === 'owned') {
-
-            variants =
-                variants.filter(
-                    v => v.owned
-                );
-        }
-
-        if (filter === 'missing') {
-
-            variants =
-                variants.filter(
-                    v => !v.owned
-                );
-        }
-
-        if (filter === 'mastered') {
-
-            variants =
-                variants.filter(
-                    v =>
-                        v.owned &&
-                        v.mastered === true
-                );
-        }
-
-        if (filter === 'new') {
-
-            if (!season.current)
-                return null;
-
-            const newIds =
-                Array.isArray(data.current.newIds)
-                    ? data.current.newIds
-                    : [];
-
-            variants =
-                variants.filter(
-                    v =>
-                        newIds.includes(v.id)
-                );
-        }
-
-        if (query) {
-
-            variants =
-                variants.filter(
-                    v =>
-                        family.name
-                            .toLowerCase()
-                            .includes(query) ||
-                        v.name
-                            .toLowerCase()
-                            .includes(query)
-                );
-        }
-
-        if (variants.length === 0)
-            return null;
-
-        return {
-            ...family,
-            variants
-        };
-    }
-
-    // =========================================================
-    // FAMILY STAT
-    // =========================================================
-    function familyStats(family) {
-
-        const total =
-            family.variants.length;
-
-        const owned =
-            family.variants.filter(
-                v => v.owned
-            ).length;
-
-        const missing =
-            total - owned;
-
-        return {
-            total,
-            owned,
-            missing
-        };
-    }
-
-    // =========================================================
-    // SORT FAMILIES
-    // =========================================================
-    function sortFamilies(families) {
-
-        return families.sort(
-            (a, b) => {
-
-                const aStats =
-                    familyStats(a);
-
-                const bStats =
-                    familyStats(b);
-
-                switch (sortBy) {
-
-                    case 'completion':
-                        return (
-                            (bStats.owned / Math.max(1, bStats.total)) -
-                            (aStats.owned / Math.max(1, aStats.total))
-                        );
-
-                    case 'owned':
-                        return (
-                            bStats.owned -
-                            aStats.owned
-                        );
-
-                    case 'missing':
-                        return (
-                            bStats.missing -
-                            aStats.missing
-                        );
-
-                    default:
-                        return a.name.localeCompare(
-                            b.name
-                        );
+                function updateLiveStatus(message, isError = false) {
+                    liveStatus.textContent = message;
+                    liveStatus.style.color =
+                        isError ? '#fb7185' : '#86efac';
                 }
-            }
-        );
-    }
-
-    // =========================================================
-    // BUILD VARIANT CARD
-    // =========================================================
-    function buildVariant(v, season) {
-
-        const displayName =
-            variantName(v.name);
-
-        const css =
-            variantClass(
-                displayName,
-                v.owned
-            );
-
-        const masteredClass =
-            v.mastered === true
-                ? ' variant-mastered'
-                : '';
-
-        let status =
-            v.owned
-                ? (
-                    v.mastered === true
-                        ? '★ MASTERED'
-                        : '✓ OWNED'
-                )
-                : '✗ MISSING';
-
-        let newBadge = '';
-
-        if (
-            season.current &&
-            Array.isArray(data.current.newIds) &&
-            data.current.newIds.includes(v.id)
-        ) {
-            newBadge =
-                '<span class="new-badge">NEW</span>';
-        }
-
-        let image = '';
-
-        if (v.image) {
-
-            image =
-                '<img class="variant-icon" src="' +
-                escapeHtml(v.image) +
-                '" alt="' +
-                escapeHtml(displayName) +
-                '" loading="lazy">';
-        }
-
-        return (
-            '<div class="variant ' +
-            css +
-            masteredClass +
-            '">' +
-
-            image +
-
-            '<div class="variant-info">' +
-
-            '<div class="variant-name">' +
-            escapeHtml(displayName) +
-            '</div>' +
-
-            '<div class="variant-status">' +
-            status +
-            '</div>' +
-
-            newBadge +
-
-            '</div>' +
-
-            '</div>'
-        );
-    }
 
-    // =========================================================
-    // BUILD FAMILY CARD
-    // =========================================================
-    function buildFamily(family, season) {
-
-        const stats =
-            familyStats(family);
-
-        const hasBase =
-            family.variants.some(
-                v =>
-                    v.name.toLowerCase() === 'base'
-            );
-
-        const base =
-            family.variants.find(
-                v =>
-                    v.name.toLowerCase() === 'base'
-            );
-
-        const missingBase =
-            hasBase &&
-            base &&
-            !base.owned;
-
-        let statusClass =
-            'status-complete';
-
-        let statusText =
-            'COMPLETE';
-
-        if (missingBase) {
-
-            statusClass =
-                'status-missing';
-
-            statusText =
-                'MISSING';
-
-        }
-        else if (stats.missing > 0) {
-
-            statusClass =
-                'status-progress';
-
-            statusText =
-                'VARIANTS MISSING';
-        }
-
-        const variants =
-            family.variants
-                .slice()
-                .sort(
-                    (a, b) =>
-                        variantOrder(a.name) -
-                        variantOrder(b.name) ||
-                        a.name.localeCompare(b.name)
-                );
-
-        let html = '';
-
-        html +=
-            '<div class="family">';
-
-        html +=
-            '<span class="family-status ' +
-            statusClass +
-            '">' +
-            statusText +
-            '</span>';
-
-        html +=
-            '<div class="family-name">' +
-            escapeHtml(family.name) +
-            ' Sprite</div>';
-
-        html +=
-            '<div class="variants">';
-
-        variants.forEach(v => {
-
-            html +=
-                buildVariant(
-                    v,
-                    season
-                );
-        });
-
-        html +=
-            '</div>';
-
-        html +=
-            '</div>';
-
-        return html;
-    }
-
-
-
-
-
-    // =========================================================
-    // FORMAT SEASON DATE
-    // =========================================================
-    function formatSeasonDate(value) {
-
-        if (!value)
-            return '';
-
-        const date =
-            new Date(value);
-
-        if (isNaN(date.getTime()))
-            return value;
-
-        return new Intl.DateTimeFormat(
-            'en-US',
-            {
-                timeZone: 'UTC',
-                month: 'long',
-                day: 'numeric',
-                year: 'numeric',
-                hour: 'numeric',
-                minute: '2-digit',
-                hour12: true
-            }
-        ).format(date) + ' UTC';
-    }
-    // =========================================================
-    // RENDER DASHBOARD
-    // =========================================================
-    function renderDashboard() {
-
-        const seasons =
-            getSelectedSeasons();
-        stats.classList.remove('history-mode');
-
-       if (selectedSeason === 'ALL') {
-
-    dashboardTitle.textContent =
-        'Sprite Collection History';
-
-    dashboardMeta.textContent =
-        'Tracking ' +
-        seasons.length +
-        ' season' +
-        (seasons.length === 1 ? '' : 's');
-
-    stats.innerHTML = '';
-
-    let historyHtml = '';
-
-    seasons.forEach(season => {
-
-        const s =
-            season.stats ||
-            calculateStats(
-                season.families
-            );
-
-        const completion =
-            Number(
-                s.completionPercent || 0
-            );
-
-        historyHtml +=
-            '<div class="history-card">' +
-
-                '<div class="history-card-top">' +
-
-                    '<div>' +
-
-                        '<div class="history-card-title">' +
-                            'Chapter ' +
-                            escapeHtml(season.chapter) +
-                            ' Season ' +
-                            escapeHtml(season.season) +
-                            ' — ' +
-                            escapeHtml(season.name) +
-                        '</div>' +
-
-                        '<div class="history-card-subtitle">' +
-                            'Game Version: ' +
-                            escapeHtml(
-                                season.gameVersion || 'Unknown'
-                            ) +
-                        '</div>' +
-
-                    '</div>' +
-
-                    '<div class="history-status ' +
-                        (
-                            season.current
-                                ? 'history-current'
-                                : 'history-archived'
-                        ) +
-                    '">' +
-                        (
-                            season.current
-                                ? 'CURRENT'
-                                : 'ARCHIVED'
-                        ) +
-                    '</div>' +
-
-                '</div>' +
-
-                '<div class="history-stats">' +
-
-                    '<div class="history-stat">' +
-                        '<div class="history-stat-value">' +
-                            s.ownedVariants +
-                            ' / ' +
-                            s.totalVariants +
-                        '</div>' +
-                        '<div class="history-stat-label">' +
-                            'Variants' +
-                        '</div>' +
-                    '</div>' +
-
-                    '<div class="history-stat">' +
-                        '<div class="history-stat-value">' +
-                            s.ownedFamilies +
-                            ' / ' +
-                            s.totalFamilies +
-                        '</div>' +
-                        '<div class="history-stat-label">' +
-                            'Families' +
-                        '</div>' +
-                    '</div>' +
-
-                    '<div class="history-stat">' +
-                        '<div class="history-stat-value">' +
-                            s.masteredVariantCount +
-                        '</div>' +
-                        '<div class="history-stat-label">' +
-                            'Mastered' +
-                        '</div>' +
-                    '</div>' +
-
-                    '<div class="history-stat">' +
-                        '<div class="history-stat-value">' +
-                            completion.toFixed(2) +
-                            '%' +
-                        '</div>' +
-                        '<div class="history-stat-label">' +
-                            'Completion' +
-                        '</div>' +
-                    '</div>' +
-
-                '</div>' +
-
-            '</div>';
-    });
-
-    stats.classList.add('history-mode');
-
-stats.innerHTML =
-    '<div class="history-summary">' +
-        historyHtml +
-    '</div>';
-
-return;
-}
-
-        const season =
-            seasons[0];
-
-        if (!season)
-            return;
-
-        dashboardTitle.textContent =
-            'Chapter ' +
-            season.chapter +
-            ' Season ' +
-            season.season +
-            ' — ' +
-            season.name;
-
-        dashboardMeta.innerHTML =
-            'Fortnite Version: ' +
-            escapeHtml(season.gameVersion) +
-            (
-                season.dateBegin
-                    ? '<br>Season Begin: ' +
-                      escapeHtml(formatSeasonDate(season.dateBegin))
-                    : ''
-            ) +
-            (
-                season.dateEnd
-                    ? '<br>Season End: ' +
-                      escapeHtml(formatSeasonDate(season.dateEnd))
-                    : ''
-            );
-
-        const s =
-            season.stats ||
-            calculateStats(
-                season.families
-            );
-
-        const percent =
-            Number(
-                s.completionPercent || 0
-            );
-
-        stats.innerHTML =
-            statCard(
-                s.ownedVariants || 0,
-                s.totalVariants || 0,
-                'Variants Owned'
-            ) +
-
-            statCard(
-                s.ownedFamilies || 0,
-                s.totalFamilies || 0,
-                'Families Owned'
-            ) +
-
-            statCard(
-                percent.toFixed(2) + '%',
-                '',
-                'Completion'
-            ) +
-
-            statCard(
-                s.masteredVariantCount || 0,
-                s.ownedMasterableVariantCount || 0,
-                'Variants Mastered'
-            );
-    }
-
-    // =========================================================
-    // STAT CARD
-    // =========================================================
-    function statCard(value, total, label) {
-
-        let display =
-            total === ''
-                ? value
-                : value + ' / ' + total;
-
-        return (
-            '<div class="stat">' +
-            '<div class="stat-value">' +
-            escapeHtml(display) +
-            '</div>' +
-            '<div class="stat-label">' +
-            escapeHtml(label) +
-            '</div>' +
-            '</div>'
-        );
-    }
-
-    // =========================================================
-    // RENDER CONTENT
-    // =========================================================
-    function renderContent() {
-
-        const seasons =
-            getSelectedSeasons();
-
-        let html = '';
-
-        seasons.forEach(season => {
-
-            let families =
-                season.families
-                    .map(
-                        family =>
-                            filterFamily(
-                                family,
-                                season
+                    let archives =
+                        Array.isArray(data.archives)
+                            ? data.archives
+                            : [];
+
+                    // =========================================================
+                    // HTML ESCAPE
+                    // =========================================================
+                    function escapeHtml(value) {
+
+                        return String(value ?? '')
+                            .replace(/&/g, '&amp;')
+                            .replace(/</g, '&lt;')
+                            .replace(/>/g, '&gt;')
+                            .replace(/"/g, '&quot;')
+                            .replace(/'/g, '&#039;');
+                    }
+
+                        // =========================================================
+                        // CLEAN FAMILY NAME
+                        // =========================================================
+                        function cleanFamilyName(name) {
+
+                            if (!name)
+                                return '';
+
+                            name =
+                                String(name)
+                                    .trim();
+
+                            if (
+                                name.toLowerCase().endsWith(' sprite')
+                            ) {
+                                name =
+                                    name.substring(
+                                        0,
+                                        name.length - 7
+                                    ).trim();
+                            }
+
+                            return name;
+                        }
+                    // =========================================================
+                    // VARIANT NAME
+                    // =========================================================
+                    function variantName(value) {
+
+                        let name =
+                            String(value ?? '');
+
+                        if (
+                            name.toLowerCase() ===
+                            'reaper'
+                        ) {
+                            return 'Bounty Hunter';
+                        }
+
+                        if (
+                            name.toLowerCase() ===
+                            'tricktreat'
+                        ) {
+                            return 'Trick Or Treat';
+                        }
+
+                        return name;
+                    }
+
+                    // =========================================================
+                    // VARIANT CLASS
+                    // =========================================================
+                    function variantClass(name, owned) {
+
+                        if (!owned)
+                            return 'variant-missing';
+
+                        const lower =
+                            name.toLowerCase();
+
+                        if (lower === 'base')
+                            return 'variant-base';
+
+                        if (lower === 'gold')
+                            return 'variant-gold';
+
+                        if (lower === 'cheatmaster')
+                            return 'variant-cheatmaster';
+
+                        if (lower === 'loothacker')
+                            return 'variant-loothacker';
+
+                        if (lower === 'bounty hunter')
+                            return 'variant-bounty';
+
+                		if (lower === 'trick or treat')
+                			return 'variant-tricktreat';
+
+                        return 'variant-owned';
+                    }
+
+                    // =========================================================
+                    // VARIANT SORT
+                    // =========================================================
+                    function variantOrder(name) {
+
+                        const lower =
+                            name.toLowerCase();
+
+                        if (lower === 'base')
+                            return 0;
+
+                        if (lower === 'gold')
+                            return 1;
+
+                        if (lower === 'cheatmaster')
+                            return 2;
+
+                        if (lower === 'loothacker')
+                            return 3;
+
+                        if (lower === 'bounty hunter')
+                            return 4;
+
+                		if (lower === 'trick or treat')
+                			return 5;
+
+                		return 100;
+                    }
+
+                    // =========================================================
+                    // NORMALIZE CURRENT FAMILY DATA
+                    // =========================================================
+                    function normalizeCurrentFamilies() {
+
+                        return (data.current.families || [])
+                            .map(family => {
+
+                                return {
+                                    name: family.name,
+                                    baseKnown: !!family.baseKnown,
+                                    variants:
+                                        Array.isArray(family.variants)
+                                            ? family.variants
+                                            : []
+                                };
+                            });
+                    }
+
+
+
+                	// =========================================================
+                	// NORMALIZE ARCHIVE
+                	// =========================================================
+                	function normalizeArchive(entry) {
+
+                	    const families = Array.isArray(entry.families)
+                	        ? entry.families.map(family => ({
+                	            name: family.name,
+                	            baseKnown: !!family.baseKnown,
+                	            baseOwned: !!family.baseOwned,
+                	            variants: Array.isArray(family.variants)
+                	                ? family.variants.map(variant => ({
+                	                    name: variant.name || '',
+                	                    owned: !!variant.owned,
+                	                    mastered:
+                	                        typeof variant.mastered === 'boolean'
+                	                            ? variant.mastered
+                	                            : null,
+                	                    image: variant.image || '',
+                	                    id: variant.id || ''
+                	                }))
+                	                : []
+                	        }))
+                	        : [];
+
+                	    return {
+                	        key: entry.key,
+                	        chapter: Number(entry.chapter || 0),
+                	        season: Number(entry.season || 0),
+                	        name: entry.name || 'Unknown',
+                	        gameVersion: entry.gameVersion || 'Unknown',
+                	        dateBegin: entry.dateBegin || '',
+                	        dateEnd: entry.dateEnd || '',
+                	        families: families,
+                	        stats: entry.stats || calculateStats(families)
+                	    };
+                	}
+
+
+                    // =========================================================
+                    // OWNED BASE SPRITES
+                    // =========================================================
+                    ownedSprites.forEach(sprite => {
+
+                        const name =
+                            cleanFamilyName(
+                                sprite.name || ''
+                            );
+
+                        if (!name)
+                            return;
+
+                        if (!families[name]) {
+
+                            families[name] = {
+                                name: name,
+                                variants: []
+                            };
+                        }
+                    });
+
+                    // =========================================================
+                    // MISSING SPRITE FAMILIES
+                    // =========================================================
+                    missingSprites.forEach(sprite => {
+
+                        const name =
+                            cleanFamilyName(
+                                sprite.name || ''
+                            );
+
+                        if (!name)
+                            return;
+
+                        if (!families[name]) {
+
+                            families[name] = {
+                                name: name,
+                                variants: []
+                            };
+                        }
+                    });
+
+                    // =========================================================
+                    // OWNED VARIANTS
+                    // =========================================================
+                    ownedVariants.forEach(record => {
+
+                        const familyName =
+                            cleanFamilyName(
+                                record.spriteName || ''
+                            );
+
+                        if (!familyName)
+                            return;
+
+                        const name =
+                            variantName(
+                                record.variant &&
+                                (
+                                    record.variant.variant ||
+                                    record.variant.name
+                                )
+                            );
+
+                        if (!name)
+                            return;
+
+                        if (!families[familyName]) {
+
+                            families[familyName] = {
+                                name: familyName,
+                                variants: []
+                            };
+                        }
+
+                        const variant =
+                            record.variant || {};
+
+                        families[familyName].variants.push({
+                            name: name,
+                            owned: true,
+                            mastered:
+                                typeof variant.mastered === 'boolean'
+                                    ? variant.mastered
+                                    : null,
+                            image:
+                                variant.images &&
+                                variant.images.icon
+                                ? variant.images.icon
+                                : '',
+                                id: variant.id || ''
+                            });
+                        });
+
+                    // =========================================================
+                    // MISSING VARIANTS
+                    // =========================================================
+                    missingVariants.forEach(record => {
+
+                        const familyName =
+                            cleanFamilyName(
+                                record.spriteName || ''
+                            );
+
+                        if (!familyName)
+                            return;
+
+                        const name =
+                            variantName(
+                                record.variant &&
+                                (
+                                    record.variant.variant ||
+                                    record.variant.name
+                                )
+                            );
+
+                        if (!name)
+                            return;
+
+                        if (!families[familyName]) {
+
+                            families[familyName] = {
+                                name: familyName,
+                                variants: []
+                            };
+                        }
+
+                        const variant =
+                            record.variant || {};
+
+                        families[familyName].variants.push({
+                            name: name,
+                            owned: false,
+                            mastered: null,
+                            image:
+                                variant.images &&
+                                variant.images.icon
+                                    ? variant.images.icon
+                                    : '',
+                            id: variant.id || ''
+                        });
+                    });
+
+                    return {
+                        key: entry.key,
+                        chapter: Number(entry.chapter || 0),
+                        season: Number(entry.season || 0),
+                        name: entry.name || 'Unknown',
+                        gameVersion:
+                            entry.gameVersion || 'Unknown',
+                        dateBegin:
+                            entry.dateBegin || '',
+                        dateEnd:
+                            entry.dateEnd || '',
+                        families:
+                            Object.values(families),
+                        stats:
+                            entry.stats ||
+                            calculateStats(
+                                Object.values(families)
                             )
-                    )
-                    .filter(Boolean);
+                    };
+                }
 
-            sortFamilies(families);
+                    // =========================================================
+                    // GET SEASONS
+                    // =========================================================
+                    function getSeasons() {
 
-            if (selectedSeason === 'ALL') {
+                        const result = [
+                            {
+                                key: data.current.key,
+                                chapter: Number(data.current.chapter || 0),
+                                season: Number(data.current.season || 0),
+                                name: data.current.name || 'Current',
+                                gameVersion:
+                                    data.current.gameVersion || 'Unknown',
+                                dateBegin:
+                                    data.current.dateBegin || '',
+                                dateEnd:
+                                    data.current.dateEnd || '',
+                                current: true,
+                                families:
+                                    normalizeCurrentFamilies(),
+                                stats:
+                                    data.current.stats || {}
+                            }
+                        ];
 
-                html +=
-                    '<section class="season-block">';
+                        archives
+                            .map(normalizeArchive)
+                            .forEach(entry => {
 
-                html +=
-                    '<div class="season-heading">';
+                                result.push({
+                                    ...entry,
+                                    current: false,
+                                    stats:
+                                        entry.stats ||
+                                        calculateStats(
+                                            entry.families)
+                                });
+                            });
 
-                html +=
-                    '<div>' +
-                    '<div class="season-heading-title">' +
-                    'C' +
-                    season.chapter +
-                    ' S' +
-                    season.season +
-                    ' — ' +
-                    escapeHtml(season.name) +
-                    '</div>';
+                        return result;
+                    }
 
-                html +=
-                    '<div class="season-heading-meta">' +
-                    'Fortnite Version: ' +
-                    escapeHtml(season.gameVersion) +
-                    '</div>' +
-                    '</div>';
+                    // =========================================================
+                    // CALCULATE STATS
+                    // =========================================================
+                    function calculateStats(families) {
 
-                html +=
-                    '</div>';
+                        let totalVariants = 0;
+                        let ownedVariants = 0;
+                        let mastered = 0;
+                        let masterable = 0;
+                        let ownedFamilies = 0;
 
-                html +=
-                    buildProgress(
-                        season
-                    );
-            }
+                        families.forEach(family => {
 
-            if (families.length === 0) {
+                            let familyOwned = false;
 
-                html +=
-                    '<div class="empty">' +
-                    'No sprites match the current filters.' +
-                    '</div>';
+                            family.variants.forEach(v => {
 
-            }
-            else {
+                                if (v.name.toLowerCase() === 'base' && v.owned)
+                                    familyOwned = true;
 
-                html +=
-                    '<div class="sprite-grid ' +
-                    (view === 'list'
-                        ? 'list-view'
-                        : '') +
-                    '">';
+                                if (!v.owned && v.name.toLowerCase() === 'base')
+                                    totalVariants++;
 
-                families.forEach(
-                    family => {
+                                if (v.name.toLowerCase() !== 'base')
+                                    totalVariants++;
+
+                                if (v.owned) {
+                                    ownedVariants++;
+                                    familyOwned = true;
+                                }
+
+                                if (
+                                    v.owned &&
+                                    v.mastered !== null &&
+                                    typeof v.mastered !== 'undefined'
+                                ) {
+                                    masterable++;
+
+                                    if (v.mastered)
+                                        mastered++;
+                                }
+                            });
+
+                            if (familyOwned)
+                                ownedFamilies++;
+                        });
+
+                        const totalFamilies =
+                            families.length;
+
+                        const completion =
+                            totalVariants > 0
+                                ? (ownedVariants / totalVariants) * 100
+                                : 0;
+
+                        return {
+                            ownedVariants,
+                            totalVariants,
+                            ownedFamilies,
+                            totalFamilies,
+                            completionPercent: completion,
+                            masteredVariantCount: mastered,
+                            ownedMasterableVariantCount: masterable
+                        };
+                    }
+
+                    // =========================================================
+                    // GET SELECTED SEASONS
+                    // =========================================================
+                    function getSelectedSeasons() {
+
+                        const seasons =
+                            getSeasons();
+
+                        if (selectedSeason === 'ALL')
+                            return seasons;
+
+                        return seasons.filter(
+                            season =>
+                                season.key === selectedSeason
+                        );
+                    }
+
+                    // =========================================================
+                    // RENDER SEASON TABS
+                    // =========================================================
+                    function renderSeasonTabs() {
+
+                        const seasons =
+                            getSeasons();
+
+                        let html = '';
 
                         html +=
-                            buildFamily(
-                                family,
-                                season
+                            '<button class="season-tab ' +
+                            (selectedSeason === 'ALL'
+                                ? 'active'
+                                : '') +
+                            '" data-season="ALL">All Seasons</button>';
+
+                        seasons.forEach(season => {
+
+                            html +=
+                                '<button class="season-tab ' +
+                                (selectedSeason === season.key
+                                    ? 'active'
+                                    : '') +
+                                '" data-season="' +
+                                escapeHtml(season.key) +
+                                '">';
+
+                            html +=
+                                'C' +
+                                season.chapter +
+                                ' S' +
+                                season.season;
+
+                            html +=
+                                '</button>';
+                        });
+
+                        seasonTabs.innerHTML =
+                            html;
+
+                        seasonTabs
+                            .querySelectorAll('.season-tab')
+                            .forEach(button => {
+
+                                button.addEventListener(
+                                    'click',
+                                    function () {
+
+                                        selectedSeason =
+                                            this.dataset.season;
+
+                                        updateHash();
+                                        render();
+                                    }
+                                );
+                            });
+                    }
+
+                    // =========================================================
+                    // BUILD FILTER OPTIONS
+                    // =========================================================
+                    function buildFilterOptions() {
+
+                        const families =
+                            getSelectedSeasons()
+                                .flatMap(
+                                    season => season.families
+                                );
+
+                        const variantNames =
+                            new Set();
+
+                        const spriteNames =
+                            new Set();
+
+                        families.forEach(family => {
+
+                            spriteNames.add(
+                                family.name
+                            );
+
+                            family.variants.forEach(v => {
+
+                                variantNames.add(
+                                    v.name
+                                );
+                            });
+                        });
+
+                        const sortedVariants =
+                            Array.from(variantNames)
+                                .sort(
+                                    (a, b) =>
+                                        variantOrder(a) -
+                                        variantOrder(b) ||
+                                        a.localeCompare(b)
+                                );
+
+                        const sortedSprites =
+                            Array.from(spriteNames)
+                                .sort(
+                                    (a, b) =>
+                                        a.localeCompare(b)
+                                );
+
+                        const oldVariant =
+                            variantFilter;
+
+                        const oldSprite =
+                            spriteFilter;
+
+                        variantSelect.innerHTML =
+                            '<option value="all">Variant: All</option>';
+
+                        sortedVariants.forEach(name => {
+
+                            variantSelect.innerHTML +=
+                                '<option value="' +
+                                escapeHtml(name) +
+                                '">' +
+                                escapeHtml(name) +
+                                '</option>';
+                        });
+
+                        spriteSelect.innerHTML =
+                            '<option value="all">Sprite: All</option>';
+
+                        sortedSprites.forEach(name => {
+
+                            spriteSelect.innerHTML +=
+                                '<option value="' +
+                                escapeHtml(name) +
+                                '">' +
+                                escapeHtml(name) +
+                                '</option>';
+                        });
+
+                        if (
+                            sortedVariants.includes(oldVariant)
+                        ) {
+                            variantSelect.value =
+                                oldVariant;
+                        }
+                        else {
+                            variantFilter = 'all';
+                            variantSelect.value = 'all';
+                        }
+
+                        if (
+                            sortedSprites.includes(oldSprite)
+                        ) {
+                            spriteSelect.value =
+                                oldSprite;
+                        }
+                        else {
+                            spriteFilter = 'all';
+                            spriteSelect.value = 'all';
+                        }
+                    }
+
+                    // =========================================================
+                    // FILTER FAMILY
+                    // =========================================================
+                    function filterFamily(family, season) {
+
+                        const query =
+                            search.trim().toLowerCase();
+
+                        if (
+                            query &&
+                            !family.name.toLowerCase().includes(query) &&
+                            !family.variants.some(
+                                v =>
+                                    v.name.toLowerCase().includes(query)
+                            )
+                        ) {
+                            return null;
+                        }
+
+                        if (
+                            spriteFilter !== 'all' &&
+                            family.name !== spriteFilter
+                        ) {
+                            return null;
+                        }
+
+                        let variants =
+                            family.variants.slice();
+
+                        if (variantFilter !== 'all') {
+
+                            variants =
+                                variants.filter(
+                                    v =>
+                                        v.name === variantFilter
+                                );
+                        }
+
+                        if (filter === 'owned') {
+
+                            variants =
+                                variants.filter(
+                                    v => v.owned
+                                );
+                        }
+
+                        if (filter === 'missing') {
+
+                            variants =
+                                variants.filter(
+                                    v => !v.owned
+                                );
+                        }
+
+                        if (filter === 'mastered') {
+
+                            variants =
+                                variants.filter(
+                                    v =>
+                                        v.owned &&
+                                        v.mastered === true
+                                );
+                        }
+
+                        if (filter === 'new') {
+
+                            if (!season.current)
+                                return null;
+
+                            const newIds =
+                                Array.isArray(data.current.newIds)
+                                    ? data.current.newIds
+                                    : [];
+
+                            variants =
+                                variants.filter(
+                                    v =>
+                                        newIds.includes(v.id)
+                                );
+                        }
+
+                        if (query) {
+
+                            variants =
+                                variants.filter(
+                                    v =>
+                                        family.name
+                                            .toLowerCase()
+                                            .includes(query) ||
+                                        v.name
+                                            .toLowerCase()
+                                            .includes(query)
+                                );
+                        }
+
+                        if (variants.length === 0)
+                            return null;
+
+                        return {
+                            ...family,
+                            variants
+                        };
+                    }
+
+                    // =========================================================
+                    // FAMILY STAT
+                    // =========================================================
+                    function familyStats(family) {
+
+                        const total =
+                            family.variants.length;
+
+                        const owned =
+                            family.variants.filter(
+                                v => v.owned
+                            ).length;
+
+                        const missing =
+                            total - owned;
+
+                        return {
+                            total,
+                            owned,
+                            missing
+                        };
+                    }
+
+                    // =========================================================
+                    // SORT FAMILIES
+                    // =========================================================
+                    function sortFamilies(families) {
+
+                        return families.sort(
+                            (a, b) => {
+
+                                const aStats =
+                                    familyStats(a);
+
+                                const bStats =
+                                    familyStats(b);
+
+                                switch (sortBy) {
+
+                                    case 'completion':
+                                        return (
+                                            (bStats.owned / Math.max(1, bStats.total)) -
+                                            (aStats.owned / Math.max(1, aStats.total))
+                                        );
+
+                                    case 'owned':
+                                        return (
+                                            bStats.owned -
+                                            aStats.owned
+                                        );
+
+                                    case 'missing':
+                                        return (
+                                            bStats.missing -
+                                            aStats.missing
+                                        );
+
+                                    default:
+                                        return a.name.localeCompare(
+                                            b.name
+                                        );
+                                }
+                            }
+                        );
+                    }
+
+                    // =========================================================
+                    // BUILD VARIANT CARD
+                    // =========================================================
+                    function buildVariant(v, season) {
+
+                        const displayName =
+                            variantName(v.name);
+
+                        const css =
+                            variantClass(
+                                displayName,
+                                v.owned
+                            );
+
+                        const masteredClass =
+                            v.mastered === true
+                                ? ' variant-mastered'
+                                : '';
+
+                        let status =
+                            v.owned
+                                ? (
+                                    v.mastered === true
+                                        ? '★ MASTERED'
+                                        : '✓ OWNED'
+                                )
+                                : '✗ MISSING';
+
+                        let newBadge = '';
+
+                        if (
+                            season.current &&
+                            Array.isArray(data.current.newIds) &&
+                            data.current.newIds.includes(v.id)
+                        ) {
+                            newBadge =
+                                '<span class="new-badge">NEW</span>';
+                        }
+
+                        let image = '';
+
+                        if (v.image) {
+
+                            image =
+                                '<img class="variant-icon" src="' +
+                                escapeHtml(v.image) +
+                                '" alt="' +
+                                escapeHtml(displayName) +
+                                '" loading="lazy">';
+                        }
+
+                        return (
+                            '<div class="variant ' +
+                            css +
+                            masteredClass +
+                            '">' +
+
+                            image +
+
+                            '<div class="variant-info">' +
+
+                            '<div class="variant-name">' +
+                            escapeHtml(displayName) +
+                            '</div>' +
+
+                            '<div class="variant-status">' +
+                            status +
+                            '</div>' +
+
+                            newBadge +
+
+                            '</div>' +
+
+                            '</div>'
+                        );
+                    }
+
+                    // =========================================================
+                    // BUILD FAMILY CARD
+                    // =========================================================
+                    function buildFamily(family, season) {
+
+                        const stats =
+                            familyStats(family);
+
+                        const hasBase =
+                            family.variants.some(
+                                v =>
+                                    v.name.toLowerCase() === 'base'
+                            );
+
+                        const base =
+                            family.variants.find(
+                                v =>
+                                    v.name.toLowerCase() === 'base'
+                            );
+
+                        const missingBase =
+                            hasBase &&
+                            base &&
+                            !base.owned;
+
+                        let statusClass =
+                            'status-complete';
+
+                        let statusText =
+                            'COMPLETE';
+
+                        if (missingBase) {
+
+                            statusClass =
+                                'status-missing';
+
+                            statusText =
+                                'MISSING';
+
+                        }
+                        else if (stats.missing > 0) {
+
+                            statusClass =
+                                'status-progress';
+
+                            statusText =
+                                'VARIANTS MISSING';
+                        }
+
+                        const variants =
+                            family.variants
+                                .slice()
+                                .sort(
+                                    (a, b) =>
+                                        variantOrder(a.name) -
+                                        variantOrder(b.name) ||
+                                        a.name.localeCompare(b.name)
+                                );
+
+                        let html = '';
+
+                        html +=
+                            '<div class="family">';
+
+                        html +=
+                            '<span class="family-status ' +
+                            statusClass +
+                            '">' +
+                            statusText +
+                            '</span>';
+
+                        html +=
+                            '<div class="family-name">' +
+                            escapeHtml(family.name) +
+                            ' Sprite</div>';
+
+                        html +=
+                            '<div class="variants">';
+
+                        variants.forEach(v => {
+
+                            html +=
+                                buildVariant(
+                                    v,
+                                    season
+                                );
+                        });
+
+                        html +=
+                            '</div>';
+
+                        html +=
+                            '</div>';
+
+                        return html;
+                    }
+
+
+
+
+
+                    // =========================================================
+                    // FORMAT SEASON DATE
+                    // =========================================================
+                    function formatSeasonDate(value) {
+
+                        if (!value)
+                            return '';
+
+                        const date =
+                            new Date(value);
+
+                        if (isNaN(date.getTime()))
+                            return value;
+
+                        return new Intl.DateTimeFormat(
+                            'en-US',
+                            {
+                                timeZone: 'UTC',
+                                month: 'long',
+                                day: 'numeric',
+                                year: 'numeric',
+                                hour: 'numeric',
+                                minute: '2-digit',
+                                hour12: true
+                            }
+                        ).format(date) + ' UTC';
+                    }
+                    // =========================================================
+                    // RENDER DASHBOARD
+                    // =========================================================
+                    function renderDashboard() {
+
+                        const seasons =
+                            getSelectedSeasons();
+                        stats.classList.remove('history-mode');
+
+                       if (selectedSeason === 'ALL') {
+
+                    dashboardTitle.textContent =
+                        'Sprite Collection History';
+
+                    dashboardMeta.textContent =
+                        'Tracking ' +
+                        seasons.length +
+                        ' season' +
+                        (seasons.length === 1 ? '' : 's');
+
+                    stats.innerHTML = '';
+
+                    let historyHtml = '';
+
+                    seasons.forEach(season => {
+
+                        const s =
+                            season.stats ||
+                            calculateStats(
+                                season.families
+                            );
+
+                        const completion =
+                            Number(
+                                s.completionPercent || 0
+                            );
+
+                        historyHtml +=
+                            '<div class="history-card">' +
+
+                                '<div class="history-card-top">' +
+
+                                    '<div>' +
+
+                                        '<div class="history-card-title">' +
+                                            'Chapter ' +
+                                            escapeHtml(season.chapter) +
+                                            ' Season ' +
+                                            escapeHtml(season.season) +
+                                            ' — ' +
+                                            escapeHtml(season.name) +
+                                        '</div>' +
+
+                                        '<div class="history-card-subtitle">' +
+                                            'Game Version: ' +
+                                            escapeHtml(
+                                                season.gameVersion || 'Unknown'
+                                            ) +
+                                        '</div>' +
+
+                                    '</div>' +
+
+                                    '<div class="history-status ' +
+                                        (
+                                            season.current
+                                                ? 'history-current'
+                                                : 'history-archived'
+                                        ) +
+                                    '">' +
+                                        (
+                                            season.current
+                                                ? 'CURRENT'
+                                                : 'ARCHIVED'
+                                        ) +
+                                    '</div>' +
+
+                                '</div>' +
+
+                                '<div class="history-stats">' +
+
+                                    '<div class="history-stat">' +
+                                        '<div class="history-stat-value">' +
+                                            s.ownedVariants +
+                                            ' / ' +
+                                            s.totalVariants +
+                                        '</div>' +
+                                        '<div class="history-stat-label">' +
+                                            'Variants' +
+                                        '</div>' +
+                                    '</div>' +
+
+                                    '<div class="history-stat">' +
+                                        '<div class="history-stat-value">' +
+                                            s.ownedFamilies +
+                                            ' / ' +
+                                            s.totalFamilies +
+                                        '</div>' +
+                                        '<div class="history-stat-label">' +
+                                            'Families' +
+                                        '</div>' +
+                                    '</div>' +
+
+                                    '<div class="history-stat">' +
+                                        '<div class="history-stat-value">' +
+                                            s.masteredVariantCount +
+                                        '</div>' +
+                                        '<div class="history-stat-label">' +
+                                            'Mastered' +
+                                        '</div>' +
+                                    '</div>' +
+
+                                    '<div class="history-stat">' +
+                                        '<div class="history-stat-value">' +
+                                            completion.toFixed(2) +
+                                            '%' +
+                                        '</div>' +
+                                        '<div class="history-stat-label">' +
+                                            'Completion' +
+                                        '</div>' +
+                                    '</div>' +
+
+                                '</div>' +
+
+                            '</div>';
+                    });
+
+                    stats.classList.add('history-mode');
+
+                stats.innerHTML =
+                    '<div class="history-summary">' +
+                        historyHtml +
+                    '</div>';
+
+                return;
+                }
+
+                        const season =
+                            seasons[0];
+
+                        if (!season)
+                            return;
+
+                        dashboardTitle.textContent =
+                            'Chapter ' +
+                            season.chapter +
+                            ' Season ' +
+                            season.season +
+                            ' — ' +
+                            season.name;
+
+                        dashboardMeta.innerHTML =
+                            'Fortnite Version: ' +
+                            escapeHtml(season.gameVersion) +
+                            (
+                                season.dateBegin
+                                    ? '<br>Season Begin: ' +
+                                      escapeHtml(formatSeasonDate(season.dateBegin))
+                                    : ''
+                            ) +
+                            (
+                                season.dateEnd
+                                    ? '<br>Season End: ' +
+                                      escapeHtml(formatSeasonDate(season.dateEnd))
+                                    : ''
+                            );
+
+                        const s =
+                            season.stats ||
+                            calculateStats(
+                                season.families
+                            );
+
+                        const percent =
+                            Number(
+                                s.completionPercent || 0
+                            );
+
+                        stats.innerHTML =
+                            statCard(
+                                s.ownedVariants || 0,
+                                s.totalVariants || 0,
+                                'Variants Owned'
+                            ) +
+
+                            statCard(
+                                s.ownedFamilies || 0,
+                                s.totalFamilies || 0,
+                                'Families Owned'
+                            ) +
+
+                            statCard(
+                                percent.toFixed(2) + '%',
+                                '',
+                                'Completion'
+                            ) +
+
+                            statCard(
+                                s.masteredVariantCount || 0,
+                                s.ownedMasterableVariantCount || 0,
+                                'Variants Mastered'
                             );
                     }
+
+                    // =========================================================
+                    // STAT CARD
+                    // =========================================================
+                    function statCard(value, total, label) {
+
+                        let display =
+                            total === ''
+                                ? value
+                                : value + ' / ' + total;
+
+                        return (
+                            '<div class="stat">' +
+                            '<div class="stat-value">' +
+                            escapeHtml(display) +
+                            '</div>' +
+                            '<div class="stat-label">' +
+                            escapeHtml(label) +
+                            '</div>' +
+                            '</div>'
+                        );
+                    }
+
+                    // =========================================================
+                    // RENDER CONTENT
+                    // =========================================================
+                    function renderContent() {
+
+                        const seasons =
+                            getSelectedSeasons();
+
+                        let html = '';
+
+                        seasons.forEach(season => {
+
+                            let families =
+                                season.families
+                                    .map(
+                                        family =>
+                                            filterFamily(
+                                                family,
+                                                season
+                                            )
+                                    )
+                                    .filter(Boolean);
+
+                            sortFamilies(families);
+
+                            if (selectedSeason === 'ALL') {
+
+                                html +=
+                                    '<section class="season-block">';
+
+                                html +=
+                                    '<div class="season-heading">';
+
+                                html +=
+                                    '<div>' +
+                                    '<div class="season-heading-title">' +
+                                    'C' +
+                                    season.chapter +
+                                    ' S' +
+                                    season.season +
+                                    ' — ' +
+                                    escapeHtml(season.name) +
+                                    '</div>';
+
+                                html +=
+                                    '<div class="season-heading-meta">' +
+                                    'Fortnite Version: ' +
+                                    escapeHtml(season.gameVersion) +
+                                    '</div>' +
+                                    '</div>';
+
+                                html +=
+                                    '</div>';
+
+                                html +=
+                                    buildProgress(
+                                        season
+                                    );
+                            }
+
+                            if (families.length === 0) {
+
+                                html +=
+                                    '<div class="empty">' +
+                                    'No sprites match the current filters.' +
+                                    '</div>';
+
+                            }
+                            else {
+
+                                html +=
+                                    '<div class="sprite-grid ' +
+                                    (view === 'list'
+                                        ? 'list-view'
+                                        : '') +
+                                    '">';
+
+                                families.forEach(
+                                    family => {
+
+                                        html +=
+                                            buildFamily(
+                                                family,
+                                                season
+                                            );
+                                    }
+                                );
+
+                                html +=
+                                    '</div>';
+                            }
+
+                            if (selectedSeason === 'ALL')
+                                html += '</section>';
+                        });
+
+                        content.innerHTML =
+                            html;
+                    }
+
+                    // =========================================================
+                    // BUILD PROGRESS
+                    // =========================================================
+                    function buildProgress(season) {
+
+                        const s =
+                            season.stats ||
+                            calculateStats(
+                                season.families
+                            );
+
+                        const percent =
+                            Math.max(
+                                0,
+                                Math.min(
+                                    100,
+                                    Number(
+                                        s.completionPercent || 0
+                                    )
+                                )
+                            );
+
+                        return (
+                            '<div class="progress-wrap">' +
+
+                            '<div class="progress-label">' +
+                            '<span>Season Completion</span>' +
+                            '<span>' +
+                            percent.toFixed(2) +
+                            '%</span>' +
+                            '</div>' +
+
+                            '<div class="progress-track">' +
+                            '<div class="progress-fill" style="width:' +
+                            percent.toFixed(2) +
+                            '%"></div>' +
+                            '</div>' +
+
+                            '</div>'
+                        );
+                    }
+
+                    // =========================================================
+                    // UPDATE HASH
+                    // =========================================================
+                    function updateHash() {
+
+                        const params =
+                            new URLSearchParams();
+
+                        params.set(
+                            'season',
+                            selectedSeason
+                        );
+
+                        if (filter !== 'all')
+                            params.set('filter', filter);
+
+                        if (search)
+                            params.set('search', search);
+
+                        if (variantFilter !== 'all')
+                            params.set('variant', variantFilter);
+
+                        if (spriteFilter !== 'all')
+                            params.set('sprite', spriteFilter);
+
+                        if (sortBy !== 'name')
+                            params.set('sort', sortBy);
+
+                        history.replaceState(
+                            null,
+                            '',
+                            '#' + params.toString()
+                        );
+                    }
+
+                    // =========================================================
+                    // LOAD HASH
+                    // =========================================================
+                    function loadHash() {
+
+                        const hash =
+                            window.location.hash.substring(1);
+
+                        if (!hash)
+                            return;
+
+                        const params =
+                            new URLSearchParams(hash);
+
+                        const season =
+                            params.get('season');
+
+                        if (
+                            season === 'ALL' ||
+                            getSeasons().some(
+                                s => s.key === season
+                            )
+                        ) {
+                            selectedSeason =
+                                season;
+                        }
+
+                        const savedFilter =
+                            params.get('filter');
+
+                        if (
+                            [
+                                'all',
+                                'owned',
+                                'missing',
+                                'mastered',
+                                'new'
+                            ].includes(savedFilter)
+                        ) {
+                            filter =
+                                savedFilter;
+                        }
+
+                        search =
+                            params.get('search') || '';
+
+                        variantFilter =
+                            params.get('variant') || 'all';
+
+                        spriteFilter =
+                            params.get('sprite') || 'all';
+
+                        sortBy =
+                            params.get('sort') || 'name';
+
+                        searchInput.value =
+                            search;
+
+                        sortSelect.value =
+                            sortBy;
+                    }
+
+                	    // =========================================================
+                    // AUTOMATIC DATA REFRESH
+                    // =========================================================
+
+                    function getDataSignature(source) {
+
+                        return JSON.stringify({
+                            current: source.current,
+                            archives: source.archives
+                        });
+                    }
+
+                    async function refreshSpriteData() {
+
+                        try {
+
+                            const oldSignature =
+                                getDataSignature(data);
+
+                            const newData =
+                                await fetchSpriteData();
+                			lastCheckedAt = new Date();
+
+                				updateLiveStatus(
+                				    '● LIVE — Last checked: ' +
+                				    lastCheckedAt.toLocaleTimeString()
+                				);
+
+                            const newSignature =
+                                getDataSignature(newData);
+
+                            if (
+                                oldSignature ===
+                                newSignature
+                            ) {
+                                return;
+                            }
+
+                            data =
+                                newData;
+
+                			// Rebuild data-derived values after a refresh.
+                			// Rebuild data-derived values after a refresh.
+                			archives =
+                			    Array.isArray(data.archives)
+                			        ? data.archives
+                			        : [];
+
+                            // Keep the current season if it still exists.
+                            // Otherwise switch to the new current season.
+
+                            if (
+                                selectedSeason !== 'ALL' &&
+                                !data.archives?.some(
+                                    season =>
+                                        season.key ===
+                                        selectedSeason
+                                ) &&
+                                data.current.key !==
+                                    selectedSeason
+                            ) {
+                                selectedSeason =
+                                    data.current.key;
+                            }
+
+                            render();
+
+                            console.log(
+                                '[Sprites] New Sprite data detected and rendered.'
+                            );
+
+                        }
+                        catch (error) {
+
+                					updateLiveStatus(
+                		    '● CONNECTION ISSUE — Showing last loaded data',
+                		    true
+                		);
+
+                            console.warn(
+                                '[Sprites] Automatic refresh failed:',
+                                error
+                            );
+
+                        }
+                    }
+
+                    // =========================================================
+                    // RENDER
+                    // =========================================================
+                    function render() {
+
+                        renderSeasonTabs();
+
+                        buildFilterOptions();
+
+                        renderDashboard();
+
+                        renderContent();
+
+                        footerMeta.innerHTML =
+                            'Fortnite Version: ' +
+                            escapeHtml(
+                                data.metadata.apiGameVersion
+                            ) +
+                            '<br>API Data Generated: ' +
+                            escapeHtml(
+                                data.metadata.apiGenerated
+                            ) +
+                            '<br>Page Updated: ' +
+                            escapeHtml(
+                                data.metadata.generated
+                            );
+
+                        document
+                            .querySelectorAll('.filter-button')
+                            .forEach(button => {
+
+                                button.classList.toggle(
+                                    'active',
+                                    button.dataset.filter === filter
+                                );
+                            });
+
+                        document
+                            .getElementById('gridView')
+                            .classList.toggle(
+                                'active',
+                                view === 'grid'
+                            );
+
+                        document
+                            .getElementById('listView')
+                            .classList.toggle(
+                                'active',
+                                view === 'list'
+                            );
+                    }
+
+                    // =========================================================
+                    // SEARCH
+                    // =========================================================
+                    searchInput.addEventListener(
+                        'input',
+                        function () {
+
+                            search =
+                                this.value.trim();
+
+                            updateHash();
+                            renderContent();
+                        }
+                    );
+
+                    // =========================================================
+                    // FILTER BUTTONS
+                    // =========================================================
+                    document
+                        .querySelectorAll('.filter-button')
+                        .forEach(button => {
+
+                            button.addEventListener(
+                                'click',
+                                function () {
+
+                                    filter =
+                                        this.dataset.filter;
+
+                                    updateHash();
+                                    render();
+                                }
+                            );
+                        });
+
+                    // =========================================================
+                    // VARIANT FILTER
+                    // =========================================================
+                    variantSelect.addEventListener(
+                        'change',
+                        function () {
+
+                            variantFilter =
+                                this.value;
+
+                            updateHash();
+                            renderContent();
+                        }
+                    );
+
+                    // =========================================================
+                    // SPRITE FILTER
+                    // =========================================================
+                    spriteSelect.addEventListener(
+                        'change',
+                        function () {
+
+                            spriteFilter =
+                                this.value;
+
+                            updateHash();
+                            renderContent();
+                        }
+                    );
+
+                    // =========================================================
+                    // SORT
+                    // =========================================================
+                    sortSelect.addEventListener(
+                        'change',
+                        function () {
+
+                            sortBy =
+                                this.value;
+
+                            updateHash();
+                            renderContent();
+                        }
+                    );
+
+                    // =========================================================
+                    // GRID VIEW
+                    // =========================================================
+                    document
+                        .getElementById('gridView')
+                        .addEventListener(
+                            'click',
+                            function () {
+
+                                view = 'grid';
+
+                                render();
+
+                            }
+                        );
+
+                    // =========================================================
+                    // LIST VIEW
+                    // =========================================================
+                    document
+                        .getElementById('listView')
+                        .addEventListener(
+                            'click',
+                            function () {
+
+                                view = 'list';
+
+                                render();
+
+                            }
+                        );
+
+                    // =========================================================
+                    // COPY LINK
+                    // =========================================================
+                    document
+                        .getElementById('copyLink')
+                        .addEventListener(
+                            'click',
+                            async function () {
+
+                                updateHash();
+
+                                try {
+
+                                    await navigator.clipboard.writeText(
+                                        window.location.href
+                                    );
+
+                                    this.textContent =
+                                        '✓ Link Copied';
+
+                                    setTimeout(
+                                        () => {
+                                            this.textContent =
+                                                '🔗 Copy Link';
+                                        },
+                                        1500
+                                    );
+
+                                }
+                                catch {
+
+                                    prompt(
+                                        'Copy this link:',
+                                        window.location.href
+                                    );
+                                }
+                            }
+                        );
+
+                    // =========================================================
+                    // SAVE IMAGE
+                    // =========================================================
+                    document
+                        .getElementById('saveImage')
+                        .addEventListener(
+                            'click',
+                            function () {
+
+                                window.print();
+
+                            }
+                        );
+
+                    // =========================================================
+                // START
+                // =========================================================
+
+                loadHash();
+                window.spriteDebug = {
+                    selectedSeason,
+
+                    current: {
+                        key: data.current.key,
+                        version: data.current.gameVersion,
+                        familyCount: data.current.families.length,
+
+                        familyDetails: data.current.families.map(f => ({
+                            family: f.name,
+                            variants: Array.isArray(f.variants)
+                                ? f.variants.length
+                                : 0,
+                            owned: Array.isArray(f.variants)
+                                ? f.variants.filter(v => v.owned).length
+                                : 0
+                        }))
+                    },
+
+                    archives: archives.map(s => ({
+                    key: s.key,
+                    version: s.gameVersion,
+
+                    ownedCount: s.owned?.length || 0,
+                    missingCount: s.missing?.length || 0,
+
+                    ownedNames: (s.owned || []).map(x => x.name),
+                    missingNames: (s.missing || []).map(x => x.name),
+
+                    ownedVariantNames: (s.ownedVariants || []).map(x => x.spriteName),
+                    missingVariantNames: (s.missingVariants || []).map(x => x.spriteName)
+                })),
+
+                    displayedSeasons: getSelectedSeasons().map(s => ({
+                        key: s.key,
+                        version: s.gameVersion,
+                        familyCount: s.families.length
+                    }))
+                };
+
+                console.log("[Sprite Debug]", window.spriteDebug);
+                render();
+                updateLiveStatus(
+                    '● LIVE — Last checked: ' +
+                    lastCheckedAt.toLocaleTimeString()
                 );
 
-                html +=
-                    '</div>';
-            }
-
-            if (selectedSeason === 'ALL')
-                html += '</section>';
-        });
-
-        content.innerHTML =
-            html;
-    }
-
-    // =========================================================
-    // BUILD PROGRESS
-    // =========================================================
-    function buildProgress(season) {
-
-        const s =
-            season.stats ||
-            calculateStats(
-                season.families
-            );
-
-        const percent =
-            Math.max(
-                0,
-                Math.min(
-                    100,
-                    Number(
-                        s.completionPercent || 0
-                    )
-                )
-            );
-
-        return (
-            '<div class="progress-wrap">' +
-
-            '<div class="progress-label">' +
-            '<span>Season Completion</span>' +
-            '<span>' +
-            percent.toFixed(2) +
-            '%</span>' +
-            '</div>' +
-
-            '<div class="progress-track">' +
-            '<div class="progress-fill" style="width:' +
-            percent.toFixed(2) +
-            '%"></div>' +
-            '</div>' +
-
-            '</div>'
-        );
-    }
-
-    // =========================================================
-    // UPDATE HASH
-    // =========================================================
-    function updateHash() {
-
-        const params =
-            new URLSearchParams();
-
-        params.set(
-            'season',
-            selectedSeason
-        );
-
-        if (filter !== 'all')
-            params.set('filter', filter);
-
-        if (search)
-            params.set('search', search);
-
-        if (variantFilter !== 'all')
-            params.set('variant', variantFilter);
-
-        if (spriteFilter !== 'all')
-            params.set('sprite', spriteFilter);
-
-        if (sortBy !== 'name')
-            params.set('sort', sortBy);
-
-        history.replaceState(
-            null,
-            '',
-            '#' + params.toString()
-        );
-    }
-
-    // =========================================================
-    // LOAD HASH
-    // =========================================================
-    function loadHash() {
-
-        const hash =
-            window.location.hash.substring(1);
-
-        if (!hash)
-            return;
-
-        const params =
-            new URLSearchParams(hash);
-
-        const season =
-            params.get('season');
-
-        if (
-            season === 'ALL' ||
-            getSeasons().some(
-                s => s.key === season
-            )
-        ) {
-            selectedSeason =
-                season;
-        }
-
-        const savedFilter =
-            params.get('filter');
-
-        if (
-            [
-                'all',
-                'owned',
-                'missing',
-                'mastered',
-                'new'
-            ].includes(savedFilter)
-        ) {
-            filter =
-                savedFilter;
-        }
-
-        search =
-            params.get('search') || '';
-
-        variantFilter =
-            params.get('variant') || 'all';
-
-        spriteFilter =
-            params.get('sprite') || 'all';
-
-        sortBy =
-            params.get('sort') || 'name';
-
-        searchInput.value =
-            search;
-
-        sortSelect.value =
-            sortBy;
-    }
-
-	    // =========================================================
-    // AUTOMATIC DATA REFRESH
-    // =========================================================
-
-    function getDataSignature(source) {
-
-        return JSON.stringify({
-            current: source.current,
-            archives: source.archives
-        });
-    }
-
-    async function refreshSpriteData() {
-
-        try {
-
-            const oldSignature =
-                getDataSignature(data);
-
-            const newData =
-                await fetchSpriteData();
-			lastCheckedAt = new Date();
-
-				updateLiveStatus(
-				    '● LIVE — Last checked: ' +
-				    lastCheckedAt.toLocaleTimeString()
-				);
-
-            const newSignature =
-                getDataSignature(newData);
-
-            if (
-                oldSignature ===
-                newSignature
-            ) {
-                return;
-            }
-
-            data =
-                newData;
-			
-			// Rebuild data-derived values after a refresh.
-			// Rebuild data-derived values after a refresh.
-			archives =
-			    Array.isArray(data.archives)
-			        ? data.archives
-			        : [];
-			
-            // Keep the current season if it still exists.
-            // Otherwise switch to the new current season.
-
-            if (
-                selectedSeason !== 'ALL' &&
-                !data.archives?.some(
-                    season =>
-                        season.key ===
-                        selectedSeason
-                ) &&
-                data.current.key !==
-                    selectedSeason
-            ) {
-                selectedSeason =
-                    data.current.key;
-            }
-
-            render();
-
-            console.log(
-                '[Sprites] New Sprite data detected and rendered.'
-            );
-
-        }
-        catch (error) {
-
-					updateLiveStatus(
-		    '● CONNECTION ISSUE — Showing last loaded data',
-		    true
-		);
-
-            console.warn(
-                '[Sprites] Automatic refresh failed:',
-                error
-            );
-
-        }
-    }
-	
-    // =========================================================
-    // RENDER
-    // =========================================================
-    function render() {
-
-        renderSeasonTabs();
-
-        buildFilterOptions();
-
-        renderDashboard();
-
-        renderContent();
-
-        footerMeta.innerHTML =
-            'Fortnite Version: ' +
-            escapeHtml(
-                data.metadata.apiGameVersion
-            ) +
-            '<br>API Data Generated: ' +
-            escapeHtml(
-                data.metadata.apiGenerated
-            ) +
-            '<br>Page Updated: ' +
-            escapeHtml(
-                data.metadata.generated
-            );
-
-        document
-            .querySelectorAll('.filter-button')
-            .forEach(button => {
-
-                button.classList.toggle(
-                    'active',
-                    button.dataset.filter === filter
+                // Check Supabase every 5 minutes.
+                setInterval(
+                    refreshSpriteData,
+                    REFRESH_INTERVAL_MS
                 );
-            });
 
-        document
-            .getElementById('gridView')
-            .classList.toggle(
-                'active',
-                view === 'grid'
-            );
-
-        document
-            .getElementById('listView')
-            .classList.toggle(
-                'active',
-                view === 'list'
-            );
-    }
-
-    // =========================================================
-    // SEARCH
-    // =========================================================
-    searchInput.addEventListener(
-        'input',
-        function () {
-
-            search =
-                this.value.trim();
-
-            updateHash();
-            renderContent();
-        }
-    );
-
-    // =========================================================
-    // FILTER BUTTONS
-    // =========================================================
-    document
-        .querySelectorAll('.filter-button')
-        .forEach(button => {
-
-            button.addEventListener(
-                'click',
-                function () {
-
-                    filter =
-                        this.dataset.filter;
-
-                    updateHash();
-                    render();
-                }
-            );
-        });
-
-    // =========================================================
-    // VARIANT FILTER
-    // =========================================================
-    variantSelect.addEventListener(
-        'change',
-        function () {
-
-            variantFilter =
-                this.value;
-
-            updateHash();
-            renderContent();
-        }
-    );
-
-    // =========================================================
-    // SPRITE FILTER
-    // =========================================================
-    spriteSelect.addEventListener(
-        'change',
-        function () {
-
-            spriteFilter =
-                this.value;
-
-            updateHash();
-            renderContent();
-        }
-    );
-
-    // =========================================================
-    // SORT
-    // =========================================================
-    sortSelect.addEventListener(
-        'change',
-        function () {
-
-            sortBy =
-                this.value;
-
-            updateHash();
-            renderContent();
-        }
-    );
-
-    // =========================================================
-    // GRID VIEW
-    // =========================================================
-    document
-        .getElementById('gridView')
-        .addEventListener(
-            'click',
-            function () {
-
-                view = 'grid';
-
-                render();
-
-            }
-        );
-
-    // =========================================================
-    // LIST VIEW
-    // =========================================================
-    document
-        .getElementById('listView')
-        .addEventListener(
-            'click',
-            function () {
-
-                view = 'list';
-
-                render();
-
-            }
-        );
-
-    // =========================================================
-    // COPY LINK
-    // =========================================================
-    document
-        .getElementById('copyLink')
-        .addEventListener(
-            'click',
-            async function () {
-
-                updateHash();
-
-                try {
-
-                    await navigator.clipboard.writeText(
-                        window.location.href
-                    );
-
-                    this.textContent =
-                        '✓ Link Copied';
-
-                    setTimeout(
-                        () => {
-                            this.textContent =
-                                '🔗 Copy Link';
-                        },
-                        1500
-                    );
-
-                }
-                catch {
-
-                    prompt(
-                        'Copy this link:',
-                        window.location.href
-                    );
-                }
-            }
-        );
-
-    // =========================================================
-    // SAVE IMAGE
-    // =========================================================
-    document
-        .getElementById('saveImage')
-        .addEventListener(
-            'click',
-            function () {
-
-                window.print();
-
-            }
-        );
-
-    // =========================================================
-// START
-// =========================================================
-
-loadHash();
-window.spriteDebug = {
-    selectedSeason,
-
-    current: {
-        key: data.current.key,
-        version: data.current.gameVersion,
-        familyCount: data.current.families.length,
-
-        familyDetails: data.current.families.map(f => ({
-            family: f.name,
-            variants: Array.isArray(f.variants)
-                ? f.variants.length
-                : 0,
-            owned: Array.isArray(f.variants)
-                ? f.variants.filter(v => v.owned).length
-                : 0
-        }))
-    },
-
-    archives: archives.map(s => ({
-    key: s.key,
-    version: s.gameVersion,
-
-    ownedCount: s.owned?.length || 0,
-    missingCount: s.missing?.length || 0,
-
-    ownedNames: (s.owned || []).map(x => x.name),
-    missingNames: (s.missing || []).map(x => x.name),
-
-    ownedVariantNames: (s.ownedVariants || []).map(x => x.spriteName),
-    missingVariantNames: (s.missingVariants || []).map(x => x.spriteName)
-})),
-
-    displayedSeasons: getSelectedSeasons().map(s => ({
-        key: s.key,
-        version: s.gameVersion,
-        familyCount: s.families.length
-    }))
-};
-
-console.log("[Sprite Debug]", window.spriteDebug);
-render();
-updateLiveStatus(
-    '● LIVE — Last checked: ' +
-    lastCheckedAt.toLocaleTimeString()
-);	
-
-// Check Supabase every 5 minutes.
-setInterval(
-    refreshSpriteData,
-    REFRESH_INTERVAL_MS
-);
-
-})();
-
-</script>
-</div>
-</body>
+                })();
+            </script>
+        </div>
+    </body>
 </html>
