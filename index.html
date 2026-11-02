@@ -2032,6 +2032,15 @@
 
                         const seasons =
                             getSelectedSeasons();
+                        console.log(
+                            'SEASON FAMILY CHECK',
+                            seasons.map(s => ({
+                                key: s.key,
+                                version: s.gameVersion,
+                                familyCount: s.families?.length,
+                                firstFamily: s.families?.[0]
+                            }))
+                        );
 
                         let html = '';
 
