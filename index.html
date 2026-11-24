@@ -584,11 +584,33 @@
             }
             
             .variant-legendary:hover {
-                box-shadow: 0 0 16px rgba(234, 179, 8, 0.55);
+                box-shadow: 0 0 16px rgba(249, 115, 22, 0.55);
             }
             
             .variant-mythic:hover {
+                box-shadow: 0 0 16px rgba(234, 179, 8, 0.55);
+            }
+
+            /* Base and Gold rarity-based hover glows */
+
+            .variant-base.variant-rarity-rare:hover,
+            .variant-gold.variant-rarity-rare:hover {
+                box-shadow: 0 0 14px rgba(59, 130, 246, 0.5);
+            }
+            
+            .variant-base.variant-rarity-epic:hover,
+            .variant-gold.variant-rarity-epic:hover {
+                box-shadow: 0 0 14px rgba(168, 85, 247, 0.5);
+            }
+            
+            .variant-base.variant-rarity-legendary:hover,
+            .variant-gold.variant-rarity-legendary:hover {
                 box-shadow: 0 0 16px rgba(249, 115, 22, 0.55);
+            }
+            
+            .variant-base.variant-rarity-mythic:hover,
+            .variant-gold.variant-rarity-mythic:hover {
+                box-shadow: 0 0 16px rgba(234, 179, 8, 0.55);
             }
 
             .variant-icon {
@@ -654,15 +676,15 @@
             }
             
             .variant-legendary {
-                color: #fde68a;
-                background: linear-gradient(145deg, rgba(234, 179, 8, 0.18), rgba(7, 11, 17, 0.78));
-                border-color: rgba(234, 179, 8, 0.5);
-            }
-            
-            .variant-mythic {
                 color: #fdba74;
                 background: linear-gradient(145deg, rgba(249, 115, 22, 0.18), rgba(7, 11, 17, 0.78));
                 border-color: rgba(249, 115, 22, 0.5);
+            }
+            
+                        .variant-mythic {
+                color: #fde68a;
+                background: linear-gradient(145deg, rgba(234, 179, 8, 0.18), rgba(7, 11, 17, 0.78));
+                border-color: rgba(234, 179, 8, 0.5);
             }
 
             .variant-gold {
@@ -1089,10 +1111,10 @@
                         
                             // Preserve existing special variant colors.
                             if (lower === 'base')
-                                return 'variant-base';
-                        
+                                return 'variant-base variant-rarity-' + rarityLower;
+                            
                             if (lower === 'gold')
-                                return 'variant-gold';
+                                return 'variant-gold variant-rarity-' + rarityLower;
                         
                             if (lower === 'cheatmaster')
                                 return 'variant-cheatmaster';
